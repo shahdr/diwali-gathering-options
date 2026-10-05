@@ -61,7 +61,6 @@
       padding: 0 24px;
     }
 
-    /* Minimal Editorial Header */
     header {
       padding: 56px 0 36px;
       border-bottom: 1px solid var(--border);
@@ -105,7 +104,6 @@
       line-height: 1.6;
     }
 
-    /* Decision Callout Banner */
     .decision-banner {
       margin-top: 32px;
       background: var(--surface);
@@ -139,10 +137,6 @@
     .callout-text {
       font-size: 14px;
       color: var(--text-main);
-    }
-
-    .callout-text strong {
-      font-weight: 600;
     }
 
     .callout-actions {
@@ -182,7 +176,6 @@
       background: var(--surface);
     }
 
-    /* Controls Strip */
     .controls-strip {
       padding: 24px 0;
       display: flex;
@@ -221,24 +214,22 @@
       font-weight: 500;
     }
 
-    /* Properties Grid */
     .properties-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-      gap: 24px;
+      gap: 28px;
       margin-top: 32px;
     }
 
-    /* Minimalist Property Card (No Unverified Photos) */
     .prop-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       transition: all 0.2s ease;
       position: relative;
-      padding: 24px;
     }
 
     .prop-card:hover {
@@ -251,11 +242,56 @@
       border-top: 3px solid var(--accent);
     }
 
+    /* Thumbnail Box */
+    .card-thumb-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-color: var(--surface);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+      background: #F0EFEB;
+    }
+
+    .prop-card:hover .card-thumb-img {
+      transform: scale(1.02);
+    }
+
+    .thumb-label {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(28, 27, 25, 0.82);
+      color: #FFF;
+      font-size: 10px;
+      padding: 3px 6px;
+      border-radius: 3px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
     .card-top-meta {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .location-tag {
@@ -273,20 +309,19 @@
       letter-spacing: 0.06em;
       background: var(--accent-soft);
       color: var(--accent);
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: 3px;
     }
 
     .prop-title {
       font-family: var(--font-serif);
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       line-height: 1.25;
       color: var(--text-main);
       margin-bottom: 14px;
     }
 
-    /* Meta Specs */
     .specs-strip {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -326,7 +361,6 @@
       color: var(--text-main);
     }
 
-    /* Badges */
     .pills-group {
       display: flex;
       flex-direction: column;
@@ -340,7 +374,7 @@
       gap: 8px;
       font-size: 12.5px;
       line-height: 1.4;
-      padding: 9px 12px;
+      padding: 8px 10px;
       border-radius: var(--radius-sm);
     }
 
@@ -356,12 +390,11 @@
       color: #85530B;
     }
 
-    /* Remarks from Chat */
     .remarks-box {
       border-top: 1px solid var(--border);
       padding-top: 16px;
       margin-top: auto;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .remarks-heading {
@@ -377,7 +410,7 @@
     }
 
     .remark-item {
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 6px;
       line-height: 1.45;
@@ -392,11 +425,11 @@
 
     .card-footer-quote {
       background: var(--accent-soft);
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-radius: var(--radius-sm);
       font-size: 12px;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-weight: 500;
     }
 
@@ -410,7 +443,6 @@
       justify-content: center;
     }
 
-    /* Floor Accordion */
     .floor-accordion {
       margin-bottom: 16px;
       border: 1px solid var(--surface-border);
@@ -524,7 +556,7 @@
       background-color: #FAFAF8;
     }
 
-    /* Consensus & Voting Section */
+    /* Consensus & Voting */
     .consensus-section {
       margin-top: 60px;
       padding-top: 40px;
@@ -611,7 +643,6 @@
 <body>
 
   <div class="container">
-    <!-- Header -->
     <header>
       <div class="header-eyebrow">
         <span>Diwali Family Gettogether 2026</span>
@@ -643,7 +674,6 @@
       </div>
     </header>
 
-    <!-- Controls Strip -->
     <div class="controls-strip">
       <div class="filter-tags" id="filterContainer">
         <button class="filter-tag active" data-filter="all">All Properties (10)</button>
@@ -657,15 +687,13 @@
 
       <div>
         <button class="btn btn-secondary" onclick="openComparisonModal()">
-          <i data-lucide="table"></i> Open Full Comparison Table
+          <i data-lucide="table"></i> Comparison Table
         </button>
       </div>
     </div>
 
-    <!-- Properties Grid -->
     <div class="properties-grid" id="propertiesContainer"></div>
 
-    <!-- Consensus & Voting Section -->
     <section class="consensus-section" id="poll-section">
       <div style="margin-bottom: 24px;">
         <span class="header-eyebrow" style="margin-bottom: 6px;">Consensus Tracker</span>
@@ -766,7 +794,13 @@
   </div>
 
   <script>
-    // Properties data compiled directly from WhatsApp chat discussions
+    // Helper function to resolve thumbnail:
+    // If a verified direct photo is set, use it. Otherwise, generate a live snapshot via microlink CDN.
+    function getListingThumbnail(url, directPhoto) {
+      if (directPhoto) return directPhoto;
+      return `https://api.microlink.io?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`;
+    }
+
     const properties = [
       {
         id: "mijmaan",
@@ -775,6 +809,7 @@
         category: "private",
         tags: ["finalist", "private", "udaipur-abu"],
         spotlight: true,
+        photo: null, // Will use live website thumbnail from mijmaan.com
         bedrooms: "10 BHK (Across 3 Floors)",
         capacity: "Up to 20–26 Guests",
         accessibility: "Floor 1 has 2 ground-level style suites for elders with private lounge & pool view; Floors 2 & 3 require stairs[cite: 1, 2].",
@@ -795,6 +830,7 @@
         category: "private",
         tags: ["finalist", "private", "udaipur-abu"],
         spotlight: true,
+        photo: null, // Uses live SaffronStays page thumbnail
         bedrooms: "10-Bedroom Heritage Home",
         capacity: "Accommodates up to 33 Guests",
         accessibility: "Heritage estate layout; ground floor bedroom options available for elders.",
@@ -813,6 +849,7 @@
         category: "airbnb",
         tags: ["finalist", "airbnb", "private", "jaipur"],
         spotlight: true,
+        photo: null, // Uses live Airbnb page thumbnail
         bedrooms: "Entire Private Villa (16+ Guests)",
         capacity: "16+ Adult Capacity",
         accessibility: "Single property takeover; convenient 35-minute drive from Jaipur Airport minimizing elder commute strain[cite: 1, 2].",
@@ -831,6 +868,7 @@
         category: "hotel",
         tags: ["hotel", "jaipur"],
         spotlight: false,
+        photo: null, // Dynamic Accor page snapshot
         bedrooms: "All Rooms on Same Floor + Suite with Terrace",
         capacity: "Full Group Accommodated",
         accessibility: "Complete elevator connectivity across floors; very elder friendly though larger walking radius in lobbies.",
@@ -850,6 +888,7 @@
         category: "hotel",
         tags: ["hotel", "jaipur"],
         spotlight: false,
+        photo: null, // Dynamic Accor page snapshot
         bedrooms: "Dedicated Entire Floor (50-key property)",
         capacity: "Full Shah Family Contingent",
         accessibility: "Full elevator access, barrier-free luxury corridors, gentle walking distances for elders.",
@@ -869,6 +908,7 @@
         category: "airbnb",
         tags: ["airbnb", "private", "jaipur"],
         spotlight: false,
+        photo: null,
         bedrooms: "Multiple Luxury Villa Options (16+ Adults)",
         capacity: "16+ Adult Capacity per property",
         accessibility: "Private villa properties with open lawns, terraces, and accessible ground floor bedroom suites.",
@@ -887,6 +927,7 @@
         category: "private",
         tags: ["private", "udaipur-abu"],
         spotlight: false,
+        photo: null,
         bedrooms: "14 Bedrooms (Heritage Palace)",
         capacity: "Up to 30+ Guests",
         accessibility: "Heritage architecture; extensive covered open space and courtyard walks.",
@@ -906,6 +947,7 @@
         category: "private",
         tags: ["private", "jaipur"],
         spotlight: false,
+        photo: null,
         bedrooms: "12 Bedrooms (Entire Estate)",
         capacity: "Up to 20–24 Guests",
         accessibility: "Private villa compound with sprawling garden lawn; minimal floor changes for common areas.",
@@ -924,6 +966,7 @@
         category: "hotel",
         tags: ["hotel", "jaipur"],
         spotlight: false,
+        photo: null,
         bedrooms: "Block of Deluxe Rooms + Presidential Suite",
         capacity: "Full Family Accommodated",
         accessibility: "Modern elevators, step-free access, wide accessible corridors, senior-friendly.",
@@ -942,6 +985,7 @@
         category: "hotel",
         tags: ["hotel", "udaipur-abu"],
         spotlight: false,
+        photo: null,
         bedrooms: "15 Rooms Available (out of 28 keys / 8 suites)",
         capacity: "Fits Entire 17+ Group",
         accessibility: "Boutique lakeside hotel structure; some stairs depending on lake-view suite wings.",
@@ -954,7 +998,7 @@
       }
     ];
 
-    let familyVotes = JSON.parse(localStorage.getItem('diwali_stay_votes_v4') || '[]');
+    let familyVotes = JSON.parse(localStorage.getItem('diwali_stay_votes_v5') || '[]');
 
     if (familyVotes.length === 0) {
       familyVotes = [
@@ -965,7 +1009,7 @@
         { voter: "Samveg", choice: "Risacca Amer, Jaipur", note: "12 BHK private estate on StayVista[cite: 1, 2]" },
         { voter: "Hiteshkaku", choice: "Fairmont Jaipur", note: "Dedicated veg kitchen & suite room gathering setup[cite: 1, 2]" }
       ];
-      localStorage.setItem('diwali_stay_votes_v4', JSON.stringify(familyVotes));
+      localStorage.setItem('diwali_stay_votes_v5', JSON.stringify(familyVotes));
     }
 
     function renderCards(filter = 'all') {
@@ -981,6 +1025,8 @@
         const card = document.createElement('div');
         card.className = `prop-card ${p.spotlight ? 'spotlight' : ''}`;
         
+        const thumbSrc = getListingThumbnail(p.url, p.photo);
+
         let remarksHtml = p.chatRemarks.map(r => `
           <div class="remark-item">
             <strong>${r.who}:</strong> ${r.text}
@@ -1000,61 +1046,76 @@
         ` : '';
 
         card.innerHTML = `
-          <div class="card-top-meta">
-            <span class="location-tag">${p.city}</span>
-            ${p.spotlight ? `<span class="spotlight-pill">Top Contender</span>` : ''}
+          <div class="card-thumb-wrapper">
+            <img 
+              src="${thumbSrc}" 
+              alt="${p.title}" 
+              class="card-thumb-img" 
+              loading="lazy" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='none';"
+            />
+            <div class="thumb-label">
+              <i data-lucide="camera" style="width: 11px; height: 11px;"></i> Site Preview
+            </div>
           </div>
-          
-          <h3 class="prop-title">${p.title}</h3>
 
-          <div class="specs-strip">
-            <div class="spec-item">
-              <i data-lucide="bed"></i>
-              <div>
-                <span class="spec-meta-label">Bedrooms / Type</span>
-                <span class="spec-meta-val">${p.bedrooms}</span>
+          <div class="card-body">
+            <div class="card-top-meta">
+              <span class="location-tag">${p.city}</span>
+              ${p.spotlight ? `<span class="spotlight-pill">Top Contender</span>` : ''}
+            </div>
+            
+            <h3 class="prop-title">${p.title}</h3>
+
+            <div class="specs-strip">
+              <div class="spec-item">
+                <i data-lucide="bed"></i>
+                <div>
+                  <span class="spec-meta-label">Bedrooms / Type</span>
+                  <span class="spec-meta-val">${p.bedrooms}</span>
+                </div>
+              </div>
+              <div class="spec-item">
+                <i data-lucide="users"></i>
+                <div>
+                  <span class="spec-meta-label">Capacity</span>
+                  <span class="spec-meta-val">${p.capacity}</span>
+                </div>
               </div>
             </div>
-            <div class="spec-item">
-              <i data-lucide="users"></i>
-              <div>
-                <span class="spec-meta-label">Capacity</span>
-                <span class="spec-meta-val">${p.capacity}</span>
+
+            <div class="pills-group">
+              <div class="pill-info pill-accessibility">
+                <i data-lucide="accessibility" style="width: 16px; height: 16px; flex-shrink: 0; color: #4B5563;"></i>
+                <div><strong>Accessibility:</strong> ${p.accessibility}</div>
+              </div>
+              <div class="pill-info pill-jain">
+                <i data-lucide="utensils" style="width: 16px; height: 16px; flex-shrink: 0; color: #B45309;"></i>
+                <div><strong>Cuisine / Jain:</strong> ${p.jainFood}</div>
               </div>
             </div>
-          </div>
 
-          <div class="pills-group">
-            <div class="pill-info pill-accessibility">
-              <i data-lucide="accessibility" style="width: 16px; height: 16px; flex-shrink: 0; color: #4B5563;"></i>
-              <div><strong>Accessibility:</strong> ${p.accessibility}</div>
+            ${accordionHtml}
+
+            <div class="remarks-box">
+              <div class="remarks-heading">
+                <i data-lucide="message-square" style="width: 12px; height: 12px;"></i> WhatsApp Feedback
+              </div>
+              ${remarksHtml}
             </div>
-            <div class="pill-info pill-jain">
-              <i data-lucide="utensils" style="width: 16px; height: 16px; flex-shrink: 0; color: #B45309;"></i>
-              <div><strong>Cuisine / Jain:</strong> ${p.jainFood}</div>
+
+            <div class="card-footer-quote">
+              <span>${p.quote}</span>
             </div>
-          </div>
 
-          ${accordionHtml}
-
-          <div class="remarks-box">
-            <div class="remarks-heading">
-              <i data-lucide="message-square" style="width: 12px; height: 12px;"></i> WhatsApp Feedback
+            <div class="card-action-bar">
+              <a href="${p.url}" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Open Listing
+              </a>
+              <button onclick="prefillVote('${p.title}')" class="btn btn-primary">
+                Select Option
+              </button>
             </div>
-            ${remarksHtml}
-          </div>
-
-          <div class="card-footer-quote">
-            <span>${p.quote}</span>
-          </div>
-
-          <div class="card-action-bar">
-            <a href="${p.url}" target="_blank" rel="noopener" class="btn btn-secondary">
-              <i data-lucide="external-link"></i> View Official Photos
-            </a>
-            <button onclick="prefillVote('${p.title}')" class="btn btn-primary">
-              Select Option
-            </button>
           </div>
         `;
         container.appendChild(card);
@@ -1087,7 +1148,7 @@
             <strong>${p.title}</strong>
             <div style="font-size: 11px; color: var(--text-muted);">${p.city}</div>
             <a href="${p.url}" target="_blank" rel="noopener" style="font-size: 11px; color: var(--accent); text-decoration: underline; display: inline-block; margin-top: 4px;">
-              View Photos & Listing &rarr;
+              View Listing &rarr;
             </a>
           </td>
           <td>${p.bedrooms}</td>
@@ -1118,7 +1179,7 @@
         familyVotes.push({ voter, choice, note });
       }
 
-      localStorage.setItem('diwali_stay_votes_v4', JSON.stringify(familyVotes));
+      localStorage.setItem('diwali_stay_votes_v5', JSON.stringify(familyVotes));
       renderTallies();
       document.getElementById('voteForm').reset();
     }
@@ -1175,7 +1236,7 @@
 
     function resetVotes() {
       if (confirm("Reset current tally back to chat baselines?")) {
-        localStorage.removeItem('diwali_stay_votes_v4');
+        localStorage.removeItem('diwali_stay_votes_v5');
         familyVotes = [
           { voter: "Dad", choice: "Mijmaan – The Villa, Udaipur", note: "Private villa takeover, no separate hotel rooms[cite: 1, 2]" },
           { voter: "Akshat", choice: "Mijmaan – The Villa, Udaipur", note: "10 BHK brochure received, pure veg[cite: 1, 2]" },
