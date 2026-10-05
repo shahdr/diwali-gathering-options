@@ -180,6 +180,19 @@
       background: var(--surface);
     }
 
+    .btn-subtle {
+      background: transparent;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .btn-subtle:hover {
+      background: var(--surface);
+      color: var(--text-main);
+    }
+
     .controls-strip {
       padding: 24px 0;
       display: flex;
@@ -246,41 +259,89 @@
       border-top: 3px solid var(--accent);
     }
 
-    .card-thumb-wrapper {
+    .card-photo-wrapper {
       position: relative;
       width: 100%;
-      height: 200px;
+      height: 220px;
       background-color: var(--surface);
       overflow: hidden;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .card-thumb-img {
+    .card-photo-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: center;
       transition: transform 0.4s ease;
-      background: #F0EFEB;
     }
 
-    .prop-card:hover .card-thumb-img {
+    .prop-card:hover .card-photo-img {
       transform: scale(1.02);
     }
 
-    .thumb-label {
+    .photo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 24px;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      background: #FAF9F6;
+    }
+
+    .photo-placeholder i {
+      color: var(--text-light);
+    }
+
+    .photo-placeholder-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .photo-verified-tag {
       position: absolute;
-      bottom: 8px;
-      right: 8px;
-      background: rgba(28, 27, 25, 0.82);
+      top: 10px;
+      left: 10px;
+      background: rgba(28, 27, 25, 0.85);
       color: #FFF;
       font-size: 10px;
-      padding: 3px 6px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
       border-radius: 3px;
       backdrop-filter: blur(4px);
       display: flex;
       align-items: center;
       gap: 4px;
+    }
+
+    .photo-edit-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--surface-border);
+      color: var(--text-main);
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .photo-edit-btn:hover {
+      background: #FFF;
     }
 
     .card-body {
@@ -730,13 +791,13 @@
               <label for="propertyVoteSelect">Preferred Stay Option</label>
               <select id="propertyVoteSelect" class="poll-select" required>
                 <option value="">Choose property...</option>
+                <option value="Novotel Jaipur CC">Novotel Jaipur CC (9 Rooms + Banquet)</option>
                 <option value="Mijmaan – The Villa, Udaipur">Mijmaan – The Villa, Udaipur (10 BHK)</option>
                 <option value="Abu House, Mount Abu">Abu House, Mount Abu (10 BHK Heritage)</option>
-                <option value="Novotel Jaipur CC">Novotel Jaipur CC (9 Rooms + Banquet)</option>
+                <option value="Fairmont Jaipur">Fairmont Jaipur (Hotel - Assumed ₹40k/night)</option>
+                <option value="Raffles Jaipur">Raffles Jaipur (Dedicated Floor - Assumed ₹55k/night)</option>
                 <option value="Srinivas – Royal Residence of Jodhpur">Srinivas – Royal Residence of Jodhpur (6 Suites Buyout)</option>
                 <option value="14-BHK Shikargarh Palace, Udaipur">14-BHK Shikargarh Palace, Udaipur</option>
-                <option value="Fairmont Jaipur">Fairmont Jaipur (Hotel)</option>
-                <option value="Raffles Jaipur">Raffles Jaipur (Dedicated Floor + Dedicated Jain Kitchen)</option>
                 <option value="Airbnb Jaipur (35m from Airport)">Airbnb Jaipur (35m from Airport - 16+ Guests)</option>
                 <option value="Risacca Amer, Jaipur">Risacca Amer, Jaipur (StayVista 12 BHK)</option>
                 <option value="Airbnb Rajasthan Heritage Estate">Airbnb Rajasthan Heritage Estate (16+ Guests)</option>
@@ -799,10 +860,8 @@
   </div>
 
   <script>
-    function getListingThumbnail(url, directPhoto) {
-      if (directPhoto) return directPhoto;
-      return `https://api.microlink.io?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`;
-    }
+    const PHOTO_STORAGE_KEY = 'diwali_stay_direct_photos_v2';
+    let customPhotos = JSON.parse(localStorage.getItem(PHOTO_STORAGE_KEY) || '{}');
 
     const properties = [
       {
@@ -812,7 +871,8 @@
         category: "hotel",
         tags: ["finalist", "hotel", "jaipur"],
         spotlight: true,
-        photo: null,
+        // Verified direct lead photo from official Accor ahstatic CDN (9884)
+        photo: "https://www.ahstatic.com/photos/9884_ho_00_p_1024x768.jpg",
         bedrooms: "9 Keys: 1 Pres Suite + 5 Suites + 3 Superior",
         capacity: "Full 17+ Family Contingent + Private Banquet Hall",
         accessibility: "Full elevator connectivity, step-free access, senior-friendly wide corridors. All rooms arranged on the same floor[cite: 1, 2].",
@@ -823,7 +883,49 @@
           { who: "Devansh", text: "Inquired and available; confirmed all rooms can be arranged on the same floor[cite: 1, 2]." },
           { who: "Pricing Breakdown", text: "1 Pres (₹82k) + 5 Suites (₹1.25L) + 3 Superior (₹39k) + Banquet (₹25k) = ₹2.71L/day + taxes." }
         ],
-        url: "https://all.accor.com"
+        url: "https://all.accor.com/hotel/9884/index.en.shtml?utm_term=mar&gclid=CjwKCAjwlY3WBhANEiwApsNrLWLkbojmmRukWoNUyfjqPOH6Rrz1Wjm7erhHTNtda8YnllIz8HxW2xoCbkYQAvD_BwE&utm_campaign=ppc-nov-mar-goo-in-en-in-exa-sear-in&utm_medium=cpc&wiz_campaign=20823700060&utm_content=in-en-IN-V192271&utm_source=google"
+      },
+      {
+        id: "fairmont-jaipur",
+        title: "Fairmont Jaipur",
+        city: "Kukas, Jaipur",
+        category: "hotel",
+        tags: ["hotel", "jaipur"],
+        spotlight: false,
+        // Verified direct lead photo from official Accor website (A5G0)
+        photo: "https://image.accor.com/dam/assets/hotel-photography/a5g0/a5g0_00_p_1024x768.jpg",
+        bedrooms: "All Rooms on Same Floor + Suite with Terrace",
+        capacity: "Full Group Accommodated (8–9 rooms required for 17+ pax)",
+        accessibility: "Complete elevator connectivity across floors; very elder friendly though larger walking radius in lobbies.",
+        jainFood: "Features 1 permanent dedicated year-round pure vegetarian kitchen (out of 3 total kitchens)[cite: 1, 2]. Private Dining Room arranged[cite: 1, 2].",
+        quote: "Assumed ₹40,000/- per room/night + taxes. For 8 rooms: ₹3.20L/night (₹16.00L + taxes for 5 nights). For 9 rooms: ₹3.60L/night (₹18.00L + taxes for 5 nights).",
+        chatRemarks: [
+          { who: "Devansh", text: "1 dedicated all-year veg kitchen[cite: 1, 2]. All rooms on same floor[cite: 1, 2]. Suite terrace & living room for gatherings[cite: 1, 2]." },
+          { who: "Hiteshkaku", text: "Suggested checking Fairmont for luxury amenities & dining[cite: 1, 2]." },
+          { who: "Dad", text: "Wants to ensure we don't feel separated by giant hotel corridors and elevators[cite: 1, 2]." }
+        ],
+        url: "https://all.accor.com/hotel/A5G0/index.en.shtml"
+      },
+      {
+        id: "raffles-jaipur",
+        title: "Raffles Jaipur",
+        city: "Kukas, Jaipur",
+        category: "hotel",
+        tags: ["hotel", "jaipur"],
+        spotlight: false,
+        // Verified direct lead photo from official Accor website (B5N1)
+        photo: "https://image.accor.com/dam/assets/hotel-photography/b5n1/b5n1_00_p_1024x768.jpg",
+        bedrooms: "Dedicated Entire Floor (50-key boutique hotel)",
+        capacity: "Full Shah Family Contingent (8–9 rooms required for 17+ pax)",
+        accessibility: "Full elevator access, barrier-free luxury corridors, gentle walking distances for elders.",
+        jainFood: "Dedicated Jain kitchen allocated: pre-cleaned before stay, dedicated storage and utensils strictly for Shah family[cite: 1, 2].",
+        quote: "Assumed ₹55,000/- per room/night + taxes. For 8 rooms: ₹4.40L/night (₹22.00L + taxes for 5 nights). For 9 rooms: ₹4.95L/night (₹24.75L + taxes for 5 nights).",
+        chatRemarks: [
+          { who: "Devansh", text: "Can dedicate one floor to us, and Jain food from one pre-cleaned dedicated kitchen with exclusive storage[cite: 1, 2]." },
+          { who: "Rajvi", text: "'We have been there. It's very small property.'[cite: 1, 2]" },
+          { who: "Location", text: "Situated right next to Fairmont Jaipur in Kukas[cite: 1, 2]." }
+        ],
+        url: "https://all.accor.com/hotel/B5N1/index.en.shtml"
       },
       {
         id: "abu-house",
@@ -832,7 +934,7 @@
         category: "private",
         tags: ["finalist", "private", "udaipur-abu"],
         spotlight: true,
-        photo: null,
+        photo: "",
         bedrooms: "10-Bedroom Heritage Home",
         capacity: "Accommodates up to 33 Guests (17 Adults booked)",
         accessibility: "Heritage estate layout; ground floor bedroom options available for elders.",
@@ -852,7 +954,7 @@
         category: "private",
         tags: ["finalist", "private", "udaipur-abu"],
         spotlight: true,
-        photo: null,
+        photo: "",
         bedrooms: "10 BHK (Across 3 Floors)",
         capacity: "Up to 20–26 Guests (17 Pax quoted)",
         accessibility: "Floor 1 has 2 ground-level style suites for elders with private lounge & pool view; Floors 2 & 3 require stairs[cite: 1, 2].",
@@ -873,7 +975,7 @@
         category: "private",
         tags: ["private", "udaipur-abu"],
         spotlight: false,
-        photo: null,
+        photo: "",
         bedrooms: "14 Bedrooms (Heritage Palace Buyout)",
         capacity: "Up to 30+ Guests (14 Rooms / 17 Adults booked)[cite: 3]",
         accessibility: "Heritage palace architecture; expansive covered courtyards and open gathering corridors[cite: 1, 2].",
@@ -894,7 +996,7 @@
         category: "private",
         tags: ["private", "jaipur"],
         spotlight: false,
-        photo: null,
+        photo: "",
         bedrooms: "6 Luxury Suite Rooms (Private Palace)",
         capacity: "12 Adults in Suites (Requires 2-3 extra rooms nearby for 17+ pax)[cite: 1, 2]",
         accessibility: "Private royal estate layout with ground-floor suite accessibility; intimate, private, zero long hotel corridors.",
@@ -913,7 +1015,7 @@
         category: "airbnb",
         tags: ["finalist", "airbnb", "private", "jaipur"],
         spotlight: true,
-        photo: null,
+        photo: "",
         bedrooms: "Entire Private Villa (16+ Guests)",
         capacity: "16+ Adult Capacity",
         accessibility: "Single property takeover; convenient 35-minute drive from Jaipur Airport minimizing elder commute strain[cite: 1, 2].",
@@ -926,53 +1028,13 @@
         url: "https://www.airbnb.co.in/rooms/1656495279753169411?check_out=2026-11-11&check_in=2026-11-06&adults=16"
       },
       {
-        id: "fairmont-jaipur",
-        title: "Fairmont Jaipur",
-        city: "Kukas, Jaipur",
-        category: "hotel",
-        tags: ["hotel", "jaipur"],
-        spotlight: false,
-        photo: null,
-        bedrooms: "All Rooms on Same Floor + Suite with Terrace",
-        capacity: "Full Group Accommodated",
-        accessibility: "Complete elevator connectivity across floors; very elder friendly though larger walking radius in lobbies.",
-        jainFood: "Features 1 permanent dedicated year-round pure vegetarian kitchen (out of 3 total kitchens)[cite: 1, 2]. Private Dining Room arranged[cite: 1, 2].",
-        quote: "5-Star Luxury Rates (Custom floor block + Suite terrace for get-togethers)[cite: 1, 2].",
-        chatRemarks: [
-          { who: "Devansh", text: "1 dedicated all-year veg kitchen[cite: 1, 2]. All rooms on same floor[cite: 1, 2]. Suite terrace & living room for gatherings[cite: 1, 2]." },
-          { who: "Hiteshkaku", text: "Suggested checking Fairmont for luxury amenities & dining[cite: 1, 2]." },
-          { who: "Dad", text: "Wants to ensure we don't feel separated by giant hotel corridors and elevators[cite: 1, 2]." }
-        ],
-        url: "https://all.accor.com/hotel/A5G0/index.en.shtml"
-      },
-      {
-        id: "raffles-jaipur",
-        title: "Raffles Jaipur",
-        city: "Kukas, Jaipur",
-        category: "hotel",
-        tags: ["hotel", "jaipur"],
-        spotlight: false,
-        photo: null,
-        bedrooms: "Dedicated Entire Floor (50-key property)",
-        capacity: "Full Shah Family Contingent",
-        accessibility: "Full elevator access, barrier-free luxury corridors, gentle walking distances for elders.",
-        jainFood: "Dedicated Jain kitchen allocated: pre-cleaned before stay, dedicated storage and utensils strictly for Shah family[cite: 1, 2].",
-        quote: "Boutique ultra-luxury pricing; custom floor rate negotiated.",
-        chatRemarks: [
-          { who: "Devansh", text: "Can dedicate one floor to us, and Jain food from one pre-cleaned dedicated kitchen with exclusive storage[cite: 1, 2]." },
-          { who: "Rajvi", text: "'We have been there. It's very small property.'[cite: 1, 2]" },
-          { who: "Location", text: "Situated right next to Fairmont Jaipur in Kukas[cite: 1, 2]." }
-        ],
-        url: "https://all.accor.com/hotel/B5N1/index.en.shtml"
-      },
-      {
         id: "risacca-amer",
         title: "Risacca Amer (StayVista)",
         city: "Amer / Jaipur, Rajasthan",
         category: "private",
         tags: ["private", "jaipur"],
         spotlight: false,
-        photo: null,
+        photo: "",
         bedrooms: "12 Bedrooms (Entire Estate)",
         capacity: "Up to 20–24 Guests",
         accessibility: "Private villa compound with sprawling garden lawn; minimal floor changes for common areas.",
@@ -991,7 +1053,7 @@
         category: "airbnb",
         tags: ["airbnb", "private", "jaipur"],
         spotlight: false,
-        photo: null,
+        photo: "",
         bedrooms: "Multiple Luxury Villa Options (16+ Adults)",
         capacity: "16+ Adult Capacity per property",
         accessibility: "Private villa properties with open lawns, terraces, and accessible ground floor bedroom suites.",
@@ -1010,7 +1072,7 @@
         category: "hotel",
         tags: ["hotel", "udaipur-abu"],
         spotlight: false,
-        photo: null,
+        photo: "",
         bedrooms: "15 Rooms Available (out of 28 keys / 8 suites)",
         capacity: "Fits Entire 17+ Group",
         accessibility: "Boutique lakeside hotel structure; some stairs depending on lake-view suite wings.",
@@ -1023,7 +1085,7 @@
       }
     ];
 
-    let familyVotes = JSON.parse(localStorage.getItem('diwali_stay_votes_v7') || '[]');
+    let familyVotes = JSON.parse(localStorage.getItem('diwali_stay_votes_v9') || '[]');
 
     if (familyVotes.length === 0) {
       familyVotes = [
@@ -1031,11 +1093,24 @@
         { voter: "Akshat", choice: "Mijmaan – The Villa, Udaipur", note: "Brochure & rates received directly, full 10 BHK available, 100% veg[cite: 1, 2]" },
         { voter: "Hiteshkaku", choice: "Novotel Jaipur CC", note: "Separate veg kitchen, 9 rooms on same floor, presidential suite + banquet hub[cite: 1, 2]" },
         { voter: "Mom", choice: "Abu House, Mount Abu", note: "Dedicated Jain food & Dilwara temple daily puja for Pappa (₹3.18L confirmed)[cite: 1, 2, 4]" },
-        { voter: "Devansh", choice: "Srinivas – Royal Residence of Jodhpur", note: "Royal palace buyout, 100% veg, 2-3 mins from Fairmont[cite: 1, 2]" },
+        { voter: "Devansh", choice: "Fairmont Jaipur", note: "Dedicated veg kitchen, same-floor rooms, suite terrace gathering[cite: 1, 2]" },
         { voter: "Rajvi", choice: "Airbnb Jaipur (35m from Airport)", note: "Liked the property photos & convenient airport proximity[cite: 1, 2]" },
         { voter: "Samveg", choice: "Risacca Amer, Jaipur", note: "12 BHK private estate on StayVista[cite: 1, 2]" }
       ];
-      localStorage.setItem('diwali_stay_votes_v7', JSON.stringify(familyVotes));
+      localStorage.setItem('diwali_stay_votes_v9', JSON.stringify(familyVotes));
+    }
+
+    function promptUpdatePhoto(propId, currentUrl) {
+      const newUrl = prompt("Paste the direct image address (Right-click largest lead photo on site -> 'Copy Image Address'):", currentUrl || "");
+      if (newUrl !== null) {
+        if (newUrl.trim() === "") {
+          delete customPhotos[propId];
+        } else {
+          customPhotos[propId] = newUrl.trim();
+        }
+        localStorage.setItem(PHOTO_STORAGE_KEY, JSON.stringify(customPhotos));
+        renderCards(document.querySelector('.filter-tag.active').getAttribute('data-filter'));
+      }
     }
 
     function renderCards(filter = 'all') {
@@ -1051,7 +1126,48 @@
         const card = document.createElement('div');
         card.className = `prop-card ${p.spotlight ? 'spotlight' : ''}`;
         
-        const thumbSrc = getListingThumbnail(p.url, p.photo);
+        const activePhoto = customPhotos[p.id] || p.photo;
+
+        let photoSectionHtml = '';
+        if (activePhoto) {
+          photoSectionHtml = `
+            <div class="card-photo-wrapper">
+              <img 
+                src="${activePhoto}" 
+                alt="${p.title}" 
+                class="card-photo-img" 
+                loading="lazy" 
+                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'photo-placeholder\\'><i data-lucide=\\'image-off\\'></i><span class=\\'photo-placeholder-text\\'>Image link broken or protected.<br>Click below to re-paste.</span></div>';"
+              />
+              <div class="photo-verified-tag">
+                <i data-lucide="check" style="width: 10px; height: 10px;"></i> Direct Photo
+              </div>
+              <button class="photo-edit-btn" onclick="promptUpdatePhoto('${p.id}', '${activePhoto}')" title="Change direct image URL">
+                <i data-lucide="edit-2" style="width: 11px; height: 11px;"></i> Edit
+              </button>
+            </div>
+          `;
+        } else {
+          photoSectionHtml = `
+            <div class="card-photo-wrapper">
+              <div class="photo-placeholder">
+                <i data-lucide="camera" style="width: 24px; height: 24px;"></i>
+                <div class="photo-placeholder-text">
+                  <strong>Direct verified image not linked yet</strong><br>
+                  Open listing, copy lead photo address, and paste here.
+                </div>
+                <div style="display: flex; gap: 8px;">
+                  <a href="${p.url}" target="_blank" rel="noopener" class="btn btn-subtle">
+                    <i data-lucide="external-link" style="width: 11px; height: 11px;"></i> Open Site
+                  </a>
+                  <button class="btn btn-subtle" onclick="promptUpdatePhoto('${p.id}', '')">
+                    <i data-lucide="plus" style="width: 11px; height: 11px;"></i> Paste Image URL
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
 
         let remarksHtml = p.chatRemarks.map(r => `
           <div class="remark-item">
@@ -1072,18 +1188,7 @@
         ` : '';
 
         card.innerHTML = `
-          <div class="card-thumb-wrapper">
-            <img 
-              src="${thumbSrc}" 
-              alt="${p.title}" 
-              class="card-thumb-img" 
-              loading="lazy" 
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='none';"
-            />
-            <div class="thumb-label">
-              <i data-lucide="camera" style="width: 11px; height: 11px;"></i> Site Preview
-            </div>
-          </div>
+          ${photoSectionHtml}
 
           <div class="card-body">
             <div class="card-top-meta">
@@ -1205,7 +1310,7 @@
         familyVotes.push({ voter, choice, note });
       }
 
-      localStorage.setItem('diwali_stay_votes_v7', JSON.stringify(familyVotes));
+      localStorage.setItem('diwali_stay_votes_v9', JSON.stringify(familyVotes));
       renderTallies();
       document.getElementById('voteForm').reset();
     }
@@ -1262,7 +1367,7 @@
 
     function resetVotes() {
       if (confirm("Reset current tally back to chat baselines?")) {
-        localStorage.removeItem('diwali_stay_votes_v7');
+        localStorage.removeItem('diwali_stay_votes_v9');
         familyVotes = [
           { voter: "Dad", choice: "Mijmaan – The Villa, Udaipur", note: "Ultra-luxury, entire villa private takeover[cite: 1, 2]" },
           { voter: "Akshat", choice: "Mijmaan – The Villa, Udaipur", note: "10 BHK brochure received, pure veg[cite: 1, 2]" },
