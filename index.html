@@ -3,934 +3,802 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diwali 2026 Family Stay Comparison | Nov 6–11</title>
+  <title>Diwali 2026 • Family Stay Options & Consensus</title>
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Phosphor Icons & Google Fonts -->
+  
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Inter (Clean Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
   
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            serif: ['Cinzel', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Inter', '-apple-system', 'sans-serif'],
           },
           colors: {
-            marigold: {
-              400: '#FBBF24',
-              500: '#F59E0B',
-              600: '#D97706',
-            },
-            royal: {
-              800: '#141E30',
-              900: '#0c121e',
-              950: '#070b13',
-            },
-            gold: {
-              300: '#F6E05E',
-              400: '#ECC94B',
-              500: '#D4AF37',
-              600: '#AA820A'
-            },
-            terracotta: '#C85A32'
+            canvas: '#FBFBFA',
+            surface: '#FFFFFF',
+            subtle: '#F4F3F0',
+            border: '#E7E5E0',
+            borderDark: '#D1CECB',
+            ink: '#1A1917',
+            muted: '#68655E',
+            bronze: {
+              DEFAULT: '#8C6D46',
+              light: '#A8875E',
+              subtle: '#F7F4EF',
+              border: '#E5DACB'
+            }
           }
         }
       }
     }
   </script>
-  
+
   <style>
-    /* Custom Scrollbar and Diwali Accents */
+    body {
+      background-color: #FBFBFA;
+      color: #1A1917;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: #EFE8DC;
+      color: #1A1917;
+    }
+
+    /* Minimalist refined scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0c121e;
+      background: #F4F3F0;
     }
     ::-webkit-scrollbar-thumb {
-      background: #2a3b5c;
-      border-radius: 4px;
+      background: #D5D2CD;
+      border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #D4AF37;
+      background: #8C6D46;
     }
-    .diwali-glow {
-      box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.25);
+
+    .border-hairline {
+      border-color: rgba(26, 25, 23, 0.08);
     }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #FFF6D1 0%, #ECC94B 50%, #D4AF37 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .glass-card {
-      background: rgba(18, 26, 43, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.18);
-    }
-    .glass-card-hover:hover {
-      border-color: rgba(212, 175, 55, 0.45);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+    .divide-hairline > * + * {
+      border-color: rgba(26, 25, 23, 0.08);
     }
   </style>
 </head>
-<body class="bg-royal-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-gold-500 selection:text-royal-950">
+<body class="bg-canvas text-ink font-sans antialiased min-h-screen selection:bg-bronze-subtle selection:text-ink">
 
-  <!-- Top Navigation & Sticky Status Bar -->
-  <header class="sticky top-0 z-40 bg-royal-900/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex flex-wrap items-center justify-between gap-3">
-      <!-- Brand & Family Banner -->
+  <header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Title & Context -->
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-marigold-500 to-amber-300 flex items-center justify-center text-royal-950 shadow-md">
-          <i class="ph-fill ph-flame text-2xl animate-pulse"></i>
-        </div>
+        <span class="w-2.5 h-2.5 rounded-full bg-bronze"></span>
         <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-lg md:text-xl font-serif font-bold text-slate-50 tracking-wider">Shah Family Diwali Get-Together</h1>
-            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-gold-500/10 text-gold-400 border border-gold-500/30">2026</span>
-          </div>
-          <p class="text-xs text-slate-400 flex items-center gap-2">
-            <span><i class="ph-bold ph-calendar-blank"></i> Nov 6–11 (5 Nights)</span>
-            <span>•</span>
-            <span><i class="ph-bold ph-users-three"></i> ~17-20 Guests</span>
-            <span>•</span>
-            <span class="text-amber-400"><i class="ph-bold ph-fork-knife"></i> 100% Jain / Pure Veg</span>
-          </p>
+          <h1 class="font-serif text-lg font-normal tracking-tight text-ink">
+            Diwali Retreat 2026 <span class="text-xs font-sans uppercase tracking-widest text-muted ml-2">Family Digest</span>
+          </h1>
+          <p class="text-[11px] text-muted hidden sm:block">Nov 6–11, 2026 (5 Nights) • ~17–20 Family Members • Pure Veg / Jain Focus</p>
         </div>
       </div>
 
-      <!-- Call Countdown & Quick Actions -->
-      <div class="flex items-center gap-3 ml-auto">
-        <div class="hidden sm:flex items-center gap-2 bg-royal-800/80 px-3 py-1.5 rounded-lg border border-gold-500/20 text-xs">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-          <span class="text-slate-300">Decision Call: <strong class="text-gold-300">Today @ 5:00 PM IST</strong></span>
+      <!-- Quick Action Controls -->
+      <div class="flex items-center gap-2.5">
+        <div class="hidden md:flex items-center gap-2 px-3 py-1 rounded border border-hairline bg-subtle text-[11px] text-muted">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span>Decision Call: <strong class="text-ink font-medium">Today at 5:00 PM IST</strong></span>
         </div>
-        
-        <button onclick="toggleCompareModal()" class="px-3.5 py-1.5 rounded-lg bg-royal-800 hover:bg-royal-700 text-gold-300 border border-gold-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm">
-          <i class="ph-bold ph-arrows-left-right text-base"></i>
+
+        <button onclick="toggleCompareDrawer()" class="px-3 py-1.5 rounded text-xs font-medium border border-border hover:bg-subtle text-ink transition-colors flex items-center gap-1.5">
+          <i class="ph ph-squares-four text-sm"></i>
           <span>Compare Matrix</span>
         </button>
 
-        <button onclick="scrollToPoll()" class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-marigold-500 to-amber-500 hover:from-marigold-400 hover:to-amber-400 text-royal-950 text-xs font-bold flex items-center gap-1.5 transition-all shadow-md">
-          <i class="ph-bold ph-check-square-offset text-base"></i>
-          <span>Live Vote (<span id="voteCountBadge">0</span>)</span>
+        <button onclick="scrollToPoll()" class="px-3.5 py-1.5 rounded text-xs font-medium bg-ink text-surface hover:bg-muted transition-colors flex items-center gap-1.5">
+          <i class="ph ph-check text-sm"></i>
+          <span>Vote (<span id="voteCountBadge">0</span>)</span>
         </button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     
-    <!-- Hero / Summary Banner -->
-    <div class="relative overflow-hidden rounded-2xl border border-gold-500/25 bg-gradient-to-r from-royal-900 via-royal-800 to-royal-900 p-6 md:p-8 diwali-glow">
-      <div class="absolute -right-12 -top-12 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-        <div class="lg:col-span-2 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-medium">
-            <i class="ph-fill ph-chat-circle-dots"></i> Consolidated from WhatsApp Family Group
+    <!-- Hero Editorial Overview -->
+    <section class="border-b border-hairline pb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-bronze font-medium">
+            <span>Synthesis of WhatsApp Family Deliberations</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight">
-            Diwali 2026 Retreat: <span class="gold-gradient-text">Family Options & Consensus</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-ink leading-tight">
+            Selecting our family sanctuary for Diwali 2026.
           </h2>
-          <p class="text-sm text-slate-300 max-w-2xl leading-relaxed">
-            Comparing private estates and luxury resorts across Udaipur, Rishikesh, Jaipur, and Mount Abu to find the ideal sanctuary with dedicated Jain food, space for our 17+ family members, and easy accessibility for Dada and elders.
+          <p class="text-sm text-muted leading-relaxed max-w-2xl font-light">
+            We are evaluating 8 vetted private villas and heritage hotels across Rajasthan (Udaipur, Mount Abu, and Jaipur) to lodge our 17+ family members comfortably. A decisive 5:00 PM family call will finalize the stay before deposits are committed.
           </p>
 
-          <!-- Core WhatsApp Directives Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            <div class="p-2.5 rounded-xl bg-royal-950/60 border border-slate-700/60">
-              <div class="flex items-center gap-2 text-gold-400 font-semibold text-xs mb-1">
-                <i class="ph-bold ph-buildings text-sm"></i> Dad's Core Rule
-              </div>
-              <p class="text-[11px] text-slate-300">Avoid cold hotel buildings with distant elevators. Prefers private estate / cottage resort with natural views & togetherness.</p>
+          <!-- Core WhatsApp Group Directives -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
+            <div class="p-3.5 rounded border border-hairline bg-surface space-y-1">
+              <span class="text-[11px] font-medium uppercase tracking-wider text-bronze block">Dad’s Primary Rule</span>
+              <p class="text-xs text-muted leading-relaxed">Avoid conventional high-rise hotels with long lobbies and isolated lifts. Favor private estates or cottage-style nature sanctuaries where the whole family stays unified.</p>
             </div>
-            <div class="p-2.5 rounded-xl bg-royal-950/60 border border-slate-700/60">
-              <div class="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                <i class="ph-bold ph-flower-lotus text-sm"></i> Pappa / Dada's Puja
-              </div>
-              <p class="text-[11px] text-slate-300">Requires a Jain Derasar within comfortable reach for morning puja + 100% strict Jain cooking utensils & menu.</p>
+            <div class="p-3.5 rounded border border-hairline bg-surface space-y-1">
+              <span class="text-[11px] font-medium uppercase tracking-wider text-bronze block">Dada & Pappa's Puja</span>
+              <p class="text-xs text-muted leading-relaxed">100% strict Jain cooking compliance plus accessible Jain Derasars nearby for daily morning rituals (e.g. Dilwara in Mount Abu or Udaipur city temples).</p>
             </div>
-            <div class="p-2.5 rounded-xl bg-royal-950/60 border border-slate-700/60">
-              <div class="flex items-center gap-2 text-amber-400 font-semibold text-xs mb-1">
-                <i class="ph-bold ph-bed text-sm"></i> Room & Bed Sizing
-              </div>
-              <p class="text-[11px] text-slate-300">Target ~10-12 bedrooms. Hiteshkaku highlighted ensuring dual king beds in 2-BHK configs so no one gets tiny rooms.</p>
+            <div class="p-3.5 rounded border border-hairline bg-surface space-y-1">
+              <span class="text-[11px] font-medium uppercase tracking-wider text-bronze block">Room Sizing & Kitchen</span>
+              <p class="text-xs text-muted leading-relaxed">Require 10–12 dedicated bedrooms with full king beds (Hiteshkaku noted avoiding secondary small bedrooms) plus hot water / induction tea provisions.</p>
             </div>
           </div>
         </div>
 
-        <!-- Quick 5 PM Decision Teleconference widget -->
-        <div class="bg-royal-950/80 rounded-xl p-5 border border-gold-500/20 text-center space-y-3">
-          <div class="flex justify-center">
-            <span class="p-3 bg-gold-500/10 text-gold-400 rounded-full border border-gold-500/30">
-              <i class="ph-bold ph-phone-call text-2xl"></i>
-            </span>
+        <!-- 5 PM Call Agenda Box -->
+        <div class="lg:col-span-4 p-5 rounded border border-hairline bg-surface space-y-4">
+          <div class="flex items-center justify-between border-b border-hairline pb-3">
+            <span class="text-[11px] uppercase tracking-widest text-muted font-medium">Meeting Agenda</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-subtle text-muted">5:00 PM IST</span>
           </div>
-          <div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Today's Call Scheduled</div>
-            <div class="text-xl font-bold text-white mt-0.5">5:00 PM IST Group Call</div>
-            <p class="text-xs text-slate-400 mt-1">Review top 2 finalists before paying deposit.</p>
+
+          <div class="space-y-2.5 text-xs text-muted">
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-subtle text-ink font-mono text-[10px] flex items-center justify-center shrink-0 mt-0.5">1</span>
+              <span>Review official ₹4.0L full-board quote for <strong>MIJMAAN The Villa</strong> (Udaipur).</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-subtle text-ink font-mono text-[10px] flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <span>Compare strict Jain heritage home <strong>Abu House</strong> (Mount Abu) & Dilwara proximity.</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-subtle text-ink font-mono text-[10px] flex items-center justify-center shrink-0 mt-0.5">3</span>
+              <span>Final vote on Private Estate vs. Single-Floor Palace Hotel (Fairmont).</span>
+            </div>
           </div>
-          <div class="pt-2 border-t border-slate-800 flex items-center justify-around text-xs">
-            <div>
-              <div class="text-slate-400">Target Pax</div>
-              <div class="font-bold text-gold-400">17 Adults</div>
-            </div>
-            <div class="w-px h-6 bg-slate-800"></div>
-            <div>
-              <div class="text-slate-400">Frontrunners</div>
-              <div class="font-bold text-emerald-400">Mijmaan & Aloha</div>
-            </div>
+
+          <div class="pt-3 border-t border-hairline flex items-center justify-between text-xs">
+            <span class="text-muted">Target Capacity:</span>
+            <span class="font-medium text-ink">17 Adults (10–12 BR)</span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Interactive Filter & Category Tabs -->
-    <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-royal-900/60 p-3 rounded-xl border border-slate-800">
-      <!-- Tabs -->
-      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 no-scrollbar" id="categoryTabs">
-        <button onclick="setFilter('all')" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-gold-500 text-royal-950 font-bold shadow-sm" data-category="all">
-          All Options (9)
+      </div>
+    </section>
+
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-2">
+      <!-- Minimalist Category Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="filterPills">
+        <button onclick="setFilter('all')" class="filter-btn px-3 py-1.5 rounded text-xs font-medium bg-ink text-surface transition-all" data-category="all">
+          All Stays (8)
         </button>
-        <button onclick="setFilter('top')" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-royal-800 transition-all" data-category="top">
-          ⭐ Top Finalists (3)
+        <button onclick="setFilter('villas')" class="filter-btn px-3 py-1.5 rounded text-xs font-medium text-muted hover:text-ink hover:bg-subtle transition-all" data-category="villas">
+          Private Estates (10+ BHK)
         </button>
-        <button onclick="setFilter('estate')" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-royal-800 transition-all" data-category="estate">
-          🏰 Private Estates / 10+ BHK
+        <button onclick="setFilter('pure-veg')" class="filter-btn px-3 py-1.5 rounded text-xs font-medium text-muted hover:text-ink hover:bg-subtle transition-all" data-category="pure-veg">
+          Strict Jain / Pure Veg Certified
         </button>
-        <button onclick="setFilter('udaipur')" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-royal-800 transition-all" data-category="udaipur">
-          🌄 Udaipur & Abu
+        <button onclick="setFilter('udaipur-abu')" class="filter-btn px-3 py-1.5 rounded text-xs font-medium text-muted hover:text-ink hover:bg-subtle transition-all" data-category="udaipur-abu">
+          Udaipur & Abu
         </button>
-        <button onclick="setFilter('jaipur')" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-royal-800 transition-all" data-category="jaipur">
-          🦚 Jaipur & Amer
+        <button onclick="setFilter('jaipur')" class="filter-btn px-3 py-1.5 rounded text-xs font-medium text-muted hover:text-ink hover:bg-subtle transition-all" data-category="jaipur">
+          Jaipur & Amer
         </button>
       </div>
 
-      <!-- Search & Sort Controls -->
+      <!-- Search & Sort -->
       <div class="flex items-center gap-2">
-        <div class="relative flex-1 md:w-56">
-          <i class="ph-bold ph-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-          <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search stay, member, food..." class="w-full bg-royal-950 border border-slate-700 rounded-lg pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+        <div class="relative w-full sm:w-56">
+          <i class="ph ph-magnifying-glass absolute left-2.5 top-2.5 text-muted text-xs"></i>
+          <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search stay, food, elder..." class="w-full bg-surface border border-hairline rounded pl-8 pr-3 py-1.5 text-xs text-ink placeholder-muted focus:outline-none focus:border-ink transition-colors">
         </div>
-        <select id="sortSelect" onchange="handleSort()" class="bg-royal-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-gold-500">
-          <option value="recommended">Sort: Family Match</option>
-          <option value="rooms-desc">Rooms: Most to Least</option>
-          <option value="price-asc">Price / Value</option>
+        <select id="sortSelect" onchange="handleSort()" class="bg-surface border border-hairline rounded px-2.5 py-1.5 text-xs text-ink focus:outline-none focus:border-ink">
+          <option value="recommended">Sort: Group Recommendation</option>
+          <option value="rooms-desc">Rooms: High to Low</option>
+          <option value="capacity-desc">Capacity: High to Low</option>
         </select>
       </div>
     </div>
 
-    <!-- Property Cards Grid -->
     <div id="propertyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Injected via JavaScript -->
     </div>
 
-    <!-- Family Voting & Consensus Hub -->
-    <section id="pollSection" class="glass-card rounded-2xl p-6 md:p-8 space-y-6 border border-gold-500/30">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+    <section id="pollSection" class="border-t border-hairline pt-8 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
-          <div class="inline-flex items-center gap-1 text-xs text-gold-400 uppercase tracking-widest font-semibold mb-1">
-            <i class="ph-bold ph-hand-tap"></i> Interactive Family Straw Poll
-          </div>
-          <h3 class="text-xl md:text-2xl font-serif font-bold text-white">Cast Your Preference for the 5 PM Call</h3>
-          <p class="text-xs text-slate-400 mt-0.5">Select who you are from the family and choose your preferred destination package.</p>
+          <span class="text-[11px] uppercase tracking-widest text-bronze font-medium block">Straw Poll</span>
+          <h3 class="font-serif text-2xl font-normal text-ink">Cast your stay preference for the 5 PM Call</h3>
         </div>
-        <div class="flex items-center gap-2">
-          <button onclick="resetVotes()" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition-all">
-            Reset All Votes
-          </button>
-        </div>
+        <button onclick="resetVotes()" class="text-xs text-muted hover:text-ink underline self-start sm:self-auto">
+          Reset logged votes
+        </button>
       </div>
 
-      <!-- Voting Action Interface -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Vote Form -->
-        <div class="bg-royal-950/70 p-5 rounded-xl border border-slate-800 space-y-4">
-          <h4 class="text-sm font-bold text-gold-300 flex items-center gap-2">
-            <i class="ph-bold ph-user-check"></i> Step 1: Select Your Profile
-          </h4>
-          
-          <div class="grid grid-cols-2 gap-2 text-xs" id="voterPills">
-            <!-- Family members -->
-            <button type="button" onclick="selectVoter('Dad')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Dad</span>
-              <span class="text-[10px] text-slate-400">Prefers Private Villa</span>
-            </button>
-            <button type="button" onclick="selectVoter('Mom')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Mom</span>
-              <span class="text-[10px] text-slate-400">Loved Rishikesh & Postcard</span>
-            </button>
-            <button type="button" onclick="selectVoter('SP Dada & Pappa')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">SP Dada & Pappa</span>
-              <span class="text-[10px] text-slate-400">Derasar Puja & Ground Floor</span>
-            </button>
-            <button type="button" onclick="selectVoter('Hiteshkaku')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Hiteshkaku</span>
-              <span class="text-[10px] text-slate-400">Check King Beds & Kitchen</span>
-            </button>
-            <button type="button" onclick="selectVoter('Rajvi & Samveg')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Rajvi & Samveg</span>
-              <span class="text-[10px] text-slate-400">Aloha / Shikargarh</span>
-            </button>
-            <button type="button" onclick="selectVoter('Akshat Shah')" class="voter-btn p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Akshat Shah</span>
-              <span class="text-[10px] text-slate-400">Managed Mijmaan Quote</span>
-            </button>
-            <button type="button" onclick="selectVoter('You')" class="voter-btn col-span-2 p-2 rounded-lg bg-royal-900 border border-slate-700 hover:border-gold-500 text-left transition-all">
-              <span class="font-bold text-white block">Devansh / You</span>
-              <span class="text-[10px] text-slate-400">Coordination & Research</span>
-            </button>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Member Voting Form -->
+        <div class="lg:col-span-5 p-5 rounded border border-hairline bg-surface space-y-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-muted font-medium mb-2">1. Select Family Member Profile</label>
+            <div class="grid grid-cols-2 gap-1.5 text-xs" id="memberButtons">
+              <button type="button" onclick="selectMember('Dad')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Dad</span>
+                <span class="text-[10px] text-muted">Prefers Private Estate</span>
+              </button>
+              <button type="button" onclick="selectMember('Mom')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Mom</span>
+                <span class="text-[10px] text-muted">Jain food & Postcard Gir</span>
+              </button>
+              <button type="button" onclick="selectMember('SP Dada & Pappa')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">SP Dada & Pappa</span>
+                <span class="text-[10px] text-muted">Daily Temple Puja & Access</span>
+              </button>
+              <button type="button" onclick="selectMember('Hiteshkaku')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Hiteshkaku</span>
+                <span class="text-[10px] text-muted">King bed verify & kitchen</span>
+              </button>
+              <button type="button" onclick="selectMember('Rajvi & Samveg')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Rajvi & Samveg</span>
+                <span class="text-[10px] text-muted">Risacca Amer / Shikargarh</span>
+              </button>
+              <button type="button" onclick="selectMember('Akshat Shah')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Akshat Shah</span>
+                <span class="text-[10px] text-muted">Mijmaan quote lead</span>
+              </button>
+              <button type="button" onclick="selectMember('Hitaswini')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Hitaswini</span>
+                <span class="text-[10px] text-muted">Family coordination</span>
+              </button>
+              <button type="button" onclick="selectMember('Devansh (You)')" class="member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors">
+                <span class="font-medium block text-ink">Devansh (You)</span>
+                <span class="text-[10px] text-muted">Research & bookings</span>
+              </button>
+            </div>
           </div>
 
-          <div class="pt-2">
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Step 2: Choose Property</label>
-            <select id="voteChoice" class="w-full bg-royal-900 border border-slate-700 rounded-lg p-2 text-xs text-white focus:outline-none focus:border-gold-500">
-              <option value="MIJMAAN – The Villa, Udaipur">MIJMAAN – The Villa, Udaipur (Entire 10 BHK Private Estate)</option>
-              <option value="Abu House, Mount Abu">Abu House, Mount Abu (100% Jain/Veg Heritage Home)</option>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-muted font-medium mb-1.5">2. Preferred Property Choice</label>
+            <select id="voteOptionSelect" class="w-full bg-canvas border border-hairline rounded p-2 text-xs text-ink focus:outline-none focus:border-ink">
+              <option value="MIJMAAN – The Villa, Udaipur">MIJMAAN – The Villa, Udaipur (10 BHK Entire Estate)</option>
+              <option value="Abu House, Mount Abu">Abu House, Mount Abu (100% Strict Jain Heritage Villa)</option>
               <option value="Shikargarh Palace, Udaipur">Shikargarh Palace, Udaipur (14 BHK SaffronStays)</option>
-              <option value="Fairmont Jaipur">Fairmont Jaipur (5-Star Luxury + Veg Kitchen Floor)</option>
-              <option value="Risacca Amer / Jaipur Luxury Villas">Risacca Amer & Jaipur Luxury Villas (12-Room StayVista)</option>
-              <option value="The Postcard Chitwan / Gir">The Postcard Concept (Full Takeover)</option>
+              <option value="Fairmont Jaipur">Fairmont Jaipur (5-Star Palace • Veg Kitchen Floor)</option>
+              <option value="Risacca Amer, Jaipur">Risacca Amer, Jaipur (StayVista 12 BR Estate)</option>
+              <option value="The Postcard on Rapti River / Gir">The Postcard Concept (Mom's Nature Takeover)</option>
+              <option value="Novotel Jaipur">Novotel Jaipur (Dedicated Veg Kitchen Suite)</option>
+              <option value="Bloom Lake Pichola, Udaipur">Bloom Lake Pichola (Ahmedabad Veg Boutique)</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Optional Quick Note / Condition</label>
-            <input type="text" id="voteComment" placeholder="e.g. Confirm ground floor room for elders" class="w-full bg-royal-900 border border-slate-700 rounded-lg p-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+            <label class="block text-xs uppercase tracking-wider text-muted font-medium mb-1.5">3. Quick Note / Condition</label>
+            <input type="text" id="voteConditionInput" placeholder="e.g., Ensure 1st floor rooms for elders" class="w-full bg-canvas border border-hairline rounded p-2 text-xs text-ink placeholder-muted focus:outline-none focus:border-ink">
           </div>
 
-          <button onclick="submitVote()" class="w-full py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-royal-950 font-bold text-xs uppercase tracking-wide transition-all shadow-md flex items-center justify-center gap-1.5">
-            <i class="ph-bold ph-thumbs-up"></i> Record Family Vote
+          <button onclick="submitVote()" class="w-full py-2.5 rounded bg-ink text-surface hover:bg-muted text-xs font-medium uppercase tracking-wider transition-colors">
+            Record Family Vote
           </button>
         </div>
 
-        <!-- Live Tally Results -->
-        <div class="lg:col-span-2 bg-royal-950/70 p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                <i class="ph-bold ph-chart-bar text-gold-400"></i> Live Group Consensus Meter
-              </h4>
-              <span class="text-xs text-slate-400"><span id="totalVotesRegistered">0</span> Family votes recorded</span>
-            </div>
-            
-            <div id="voteBars" class="space-y-3.5">
-              <!-- Dynamically generated bars -->
-            </div>
+        <!-- Consensus Meters and Vote Log -->
+        <div class="lg:col-span-7 p-5 rounded border border-hairline bg-surface space-y-5">
+          <div class="flex items-center justify-between border-b border-hairline pb-3">
+            <span class="text-xs uppercase tracking-widest text-muted font-medium">Consensus Distribution</span>
+            <span class="text-xs text-muted"><span id="votesRegisteredCount" class="font-medium text-ink">0</span> responses logged</span>
           </div>
 
-          <!-- Recent Family Quotes in voting -->
-          <div class="mt-6 pt-4 border-t border-slate-800">
-            <div class="text-xs font-semibold text-slate-400 mb-2">Member Vote Logs:</div>
-            <div id="voteFeed" class="max-h-28 overflow-y-auto space-y-1.5 text-xs text-slate-300 pr-1">
-              <span class="text-slate-500 italic text-[11px]">No votes submitted yet. Click your name on the left to cast a vote!</span>
+          <!-- Vote bars container -->
+          <div id="voteResultsContainer" class="space-y-3">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Recorded comments feed -->
+          <div class="pt-4 border-t border-hairline">
+            <span class="text-[11px] uppercase tracking-wider text-muted font-medium block mb-2">Member Comments & Stances</span>
+            <div id="memberVoteFeed" class="max-h-36 overflow-y-auto space-y-1.5 text-xs text-muted pr-1">
+              <!-- Dynamically populated -->
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Comparison Matrix Modal -->
-  <div id="compareModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-    <div class="bg-royal-900 border border-gold-500/30 rounded-2xl w-full max-w-6xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
+  <div id="compareDrawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-[2px] hidden flex justify-center items-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-surface border border-hairline rounded-lg w-full max-w-6xl max-h-[92vh] flex flex-col shadow-xl overflow-hidden">
       
-      <!-- Modal Header -->
-      <div class="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-royal-950">
+      <!-- Drawer Header -->
+      <div class="p-4 sm:p-5 border-b border-hairline flex items-center justify-between">
         <div>
-          <h3 class="text-lg font-serif font-bold text-gold-300 flex items-center gap-2">
-            <i class="ph-bold ph-table"></i> Diwali Stays Side-by-Side Comparison Matrix
-          </h3>
-          <p class="text-xs text-slate-400">Comparing room capacity, elder mobility, Jain food setups, and WhatsApp member stances.</p>
+          <span class="text-[10px] uppercase tracking-widest text-bronze font-medium">Side-by-side Matrix</span>
+          <h4 class="font-serif text-xl font-normal text-ink">Diwali 2026 Stays Comparison</h4>
         </div>
-        <button onclick="toggleCompareModal()" class="w-8 h-8 rounded-full bg-royal-800 hover:bg-royal-700 flex items-center justify-center text-slate-300 hover:text-white">
-          <i class="ph-bold ph-x text-lg"></i>
+        <button onclick="toggleCompareDrawer()" class="p-1.5 text-muted hover:text-ink rounded">
+          <i class="ph ph-x text-lg"></i>
         </button>
       </div>
 
-      <!-- Modal Body (Scrollable Table) -->
+      <!-- Drawer Table Body -->
       <div class="p-4 sm:p-6 overflow-x-auto overflow-y-auto">
         <table class="w-full text-left text-xs border-collapse">
           <thead>
-            <tr class="border-b border-slate-700 text-slate-300 bg-royal-950/80">
-              <th class="p-3 font-semibold min-w-[180px]">Property Name</th>
-              <th class="p-3 font-semibold min-w-[130px]">Location & Type</th>
-              <th class="p-3 font-semibold min-w-[120px]">Rooms / Layout</th>
-              <th class="p-3 font-semibold min-w-[140px]">Jain Food / Kitchen</th>
-              <th class="p-3 font-semibold min-w-[140px]">Derasar Proximity</th>
-              <th class="p-3 font-semibold min-w-[150px]">Elder Accessibility</th>
-              <th class="p-3 font-semibold min-w-[150px]">Est. Cost / Package</th>
-              <th class="p-3 font-semibold min-w-[180px]">Family Verdict / Notes</th>
+            <tr class="border-b border-hairline text-muted">
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Property</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Location & Type</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Rooms / Capacity</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Jain / Pure Veg Food</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Derasar Puja Access</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Elder Mobility</th>
+              <th class="py-2.5 pr-4 font-medium uppercase tracking-wider text-[10px]">Pricing & Terms</th>
+              <th class="py-2.5 font-medium uppercase tracking-wider text-[10px]">Chat Feedback</th>
             </tr>
           </thead>
-          <tbody id="compareTableBody" class="divide-y divide-slate-800 text-slate-200">
+          <tbody id="matrixTableBody" class="divide-y divide-hairline">
             <!-- Dynamically populated -->
           </tbody>
         </table>
       </div>
 
-      <!-- Modal Footer -->
-      <div class="p-4 border-t border-slate-800 bg-royal-950 flex justify-end gap-3">
-        <button onclick="toggleCompareModal()" class="px-4 py-2 rounded-lg bg-royal-800 hover:bg-slate-700 text-xs font-semibold text-white">
+      <!-- Drawer Footer -->
+      <div class="p-3.5 border-t border-hairline bg-subtle flex justify-end">
+        <button onclick="toggleCompareDrawer()" class="px-4 py-1.5 text-xs rounded border border-border bg-surface text-ink hover:bg-subtle font-medium">
           Close Matrix
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Property Detail Modal (Floor Breakdown / Remarks) -->
-  <div id="detailModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-    <div class="bg-royal-900 border border-gold-500/30 rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
-      <div class="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-royal-950">
-        <div id="modalHeaderContent">
+  <div id="detailModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-[2px] hidden flex justify-center items-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-surface border border-hairline rounded-lg w-full max-w-2xl max-h-[90vh] flex flex-col shadow-xl overflow-hidden">
+      <div class="p-4 sm:p-5 border-b border-hairline flex items-center justify-between">
+        <div id="detailModalHeader">
           <!-- Injected dynamically -->
         </div>
-        <button onclick="closeDetailModal()" class="w-8 h-8 rounded-full bg-royal-800 hover:bg-royal-700 flex items-center justify-center text-slate-300 hover:text-white">
-          <i class="ph-bold ph-x text-lg"></i>
+        <button onclick="closeDetailModal()" class="p-1.5 text-muted hover:text-ink rounded">
+          <i class="ph ph-x text-lg"></i>
         </button>
       </div>
 
-      <div class="p-5 sm:p-6 overflow-y-auto space-y-5" id="modalBodyContent">
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs text-muted" id="detailModalBody">
         <!-- Injected dynamic content -->
       </div>
 
-      <div class="p-4 border-t border-slate-800 bg-royal-950 flex items-center justify-between">
-        <span class="text-xs text-slate-400">Diwali Dates: Nov 6 - Nov 11, 2026 (5 Nights)</span>
-        <button onclick="closeDetailModal()" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-royal-950 font-bold text-xs">
-          Back to Overview
+      <div class="p-3.5 border-t border-hairline bg-subtle flex justify-between items-center text-xs">
+        <span class="text-muted">Target Dates: Nov 6 – Nov 11, 2026 (5 Nights)</span>
+        <button onclick="closeDetailModal()" class="px-4 py-1.5 rounded bg-ink text-surface hover:bg-muted font-medium transition-colors">
+          Done
         </button>
       </div>
     </div>
   </div>
 
+  <!-- Toast notification -->
+  <div id="toastMessage" class="fixed bottom-5 right-5 z-50 bg-ink text-surface text-xs px-4 py-2.5 rounded shadow-lg transition-opacity duration-300 pointer-events-none opacity-0"></div>
+
   <script>
-    // Master data model from chat export (Rishikesh/Aloha removed)
-    const properties = [
+    // Master data model strictly from WhatsApp chats (Rishikesh completely excluded)
+    const stays = [
       {
         id: "mijmaan",
         name: "MIJMAAN – The Villa",
         tagline: "Ultra-luxury 10 BHK Private Estate in Aravalli Hills",
         location: "Udaipur, Rajasthan",
-        category: ["top", "estate", "udaipur"],
-        type: "Entire Private Villa Takeover",
+        category: ["villas", "pure-veg", "udaipur-abu"],
+        type: "Private Villa Buyout",
+        isTop: true,
         bedrooms: 10,
         bathrooms: 10,
-        capacity: "17-26 Guests (Villa exclusive)",
-        rating: "9.9/10",
-        badge: "Leading Frontrunner #1",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40",
-        image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+        capacity: "17–26 Guests",
         pricing: "₹3.20L (EP/Breakfast) | ₹3.70L (+Dinner & Hi-Tea) | ₹4.00L (All Meals)",
-        packageNotes: "Official quote obtained by Akshat: 5 Nights (Nov 6-11) for 17 guests. 100% Pure Veg menu.",
-        elderAccessibility: "Moderate (Multi-level). 3 floors with stairs; 2 ground/1st floor rooms with garden & lounge access for seniors.",
-        jainFoodStatus: "100% Pure Veg menu confirmed by manager Sunita. Rooftop restaurant service; dedicated kitchen team.",
-        derasarAccess: "Multiple historic Udaipur Jain temples within 20-25 mins drive.",
-        keyPerks: [
-          "Complete privacy (No outside guests)",
-          "Private plunge pool & in-room jacuzzis",
-          "Large grassy lawn for family activities & cards",
-          "Every floor has spacious common lounge"
-        ],
-        whatsappRemarks: [
-          { member: "Dad", quote: "I found this ultra-luxury private villa... looks really nice in photos. You can take the entire property rather than booking separate hotel rooms.", tag: "Dad's Top Choice" },
-          { member: "Akshat Shah", quote: "Got quote from Sunita (Manager): ₹4.0L with all meals & high tea for 17 people. 10 BHK confirmed available.", tag: "Official Quote" }
-        ],
-        termsNotes: "Music till 10 PM. Check-in 2:00 PM, Check-out 10:00 AM. 30-day cancellation deposit refund.",
+        packageDetails: "Official quote provided by Sunita (Manager) via Akshat: 5 Nights (Nov 6–11) for 17 guests. 100% Pure Veg menu daily.",
+        image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "100% Pure Veg kitchen confirmed. All meals served at rooftop restaurant. Strict vegetarian protocols.",
+        derasarAccess: "20–25 minutes drive to central Udaipur Jain Derasars.",
+        elderAccess: "1st Floor contains 2 king bedrooms with private lounge, pool view, and jharokha for Dada/Pappa. 2nd & 3rd floors via interior stairs.",
+        amenities: "Private plunge pool, swimming pool, large grassy lawn for cards/games, lounges on all 3 floors, high-speed Wi-Fi.",
+        rules: "Music permitted until 10:00 PM. Check-in 14:00, Check-out 10:00. 30-day cancellation deposit refund.",
         floors: [
-          { floor: "1st Floor (2 Rooms)", desc: "2 king rooms with private lounge & heritage jharokha. Pool & garden views. One room with private plunge pool, one with balcony. Ideal for elders." },
-          { floor: "2nd Floor (4 Rooms)", desc: "4 king rooms: Room 1 (Plunge pool), Room 2 (Luxury bathtub), Room 3 (Traditional jharokha), Room 4 (Private balcony)." },
-          { floor: "3rd Floor (4 Rooms)", desc: "4 king rooms: Room 1 (Private jacuzzi), Room 2 (Luxury bathtub), Room 3 (Jharokha), Room 4 (Garden view) + Common lounge." }
+          { name: "1st Floor (2 Rooms)", spec: "2 King bedrooms with private lounge & jharokha. Pool & garden views. 1 room features private plunge pool, 1 with balcony. Designed for elder comfort." },
+          { name: "2nd Floor (4 Rooms)", spec: "4 King bedrooms: Room 1 (Plunge pool), Room 2 (Luxury bathtub), Room 3 (Traditional jharokha), Room 4 (Private balcony)." },
+          { name: "3rd Floor (4 Rooms)", spec: "4 King bedrooms: Room 1 (Private jacuzzi), Room 2 (Luxury bathtub), Room 3 (Jharokha), Room 4 (Garden view) + Spacious lounge." }
         ],
-        link: "https://www.mijmaan.com"
+        quotes: [
+          { author: "Dad", text: "I found this ultra-luxury private villa... looks really nice in photos. You can take the entire property rather than booking separate hotel rooms.", role: "Dad's Recommendation" },
+          { author: "Akshat Shah", text: "Got official quote from Sunita: ₹4.00L with all meals (breakfast, lunch, dinner & daily hi-tea) for 17 people. 10 BHK confirmed available.", role: "Formal Quotation" }
+        ],
+        url: "https://www.mijmaan.com"
       },
       {
         id: "abu-house",
         name: "Abu House / 10-BHK Holiday Home",
-        tagline: "10-Bedroom Heritage Home with Exclusively Jain & Veg Food",
+        tagline: "10-Bedroom Heritage Home with Exclusively Jain & Veg Cuisine",
         location: "Nakki Lake, Mount Abu, Rajasthan",
-        category: ["top", "estate", "udaipur"],
-        type: "Exclusive Heritage Home",
+        category: ["villas", "pure-veg", "udaipur-abu"],
+        type: "Private Heritage Estate",
+        isTop: true,
         bedrooms: 10,
         bathrooms: 10,
         capacity: "Up to 33 Guests",
-        rating: "9.5/10",
-        badge: "Top Frontrunner #2 (Strict Jain)",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40",
-        image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
-        pricing: "SaffronStays / Heritage Private Tariff",
-        packageNotes: "Specifically highlighted by Dad for its authentic strict vegetarian & Jain credentials.",
-        elderAccessibility: "Pleasant hill station climate, gentle slopes near Nakki lake, heritage compound.",
-        jainFoodStatus: "100% Pure Jain: Advertises strictly 'Only Jain and Vegetarian Meals' on premises.",
-        derasarAccess: "World-famous Dilwara Jain Temples in Mount Abu (supreme spiritual pilgrimage for Dada's puja).",
-        keyPerks: [
-          "Strict Jain cooking without cross-contamination worries",
-          "Near Nakki lake and sacred Dilwara Temples",
-          "Fits entire 30+ extended family easily"
+        pricing: "SaffronStays Heritage Tariff",
+        packageDetails: "Dad flagged this option explicitly for its strict Jain dining pledge and capacity for extended family.",
+        image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Certified strictly 'Only Jain and Vegetarian Meals' on premises. Zero non-veg cross contamination.",
+        derasarAccess: "Located in Mount Abu — direct access to world-renowned Dilwara Jain Temples for sacred morning puja.",
+        elderAccess: "Heritage compound with gentle grade, ground floor bedrooms, and pleasant mountain weather.",
+        amenities: "Spacious family suites, private compound, walking distance to Nakki Lake.",
+        quotes: [
+          { author: "Dad", text: "Abu House is especially relevant to your Jain requirement. It has 10 bedrooms, can accommodate up to 33 guests, and specifically advertises 'Only Jain and Vegetarian Meals'.", role: "Jain Integrity Priority" }
         ],
-        whatsappRemarks: [
-          { member: "Dad", quote: "Abu House is especially relevant to your Jain requirement... advertises 'Only Jain and Vegetarian Meals'. If somebody can explore this last option.", tag: "Strong Jain Rec" },
-          { member: "Dada & Pappa", quote: "Dilwara temples nearby satisfy daily morning puja requirement.", tag: "Puja Match" }
-        ],
-        link: "https://www.saffronstays.com"
+        url: "https://www.saffronstays.com"
       },
       {
         id: "shikargarh",
         name: "Shikargarh Palace (SaffronStays)",
         tagline: "14-Bedroom Regal Heritage Palace Estate",
         location: "Udaipur, Rajasthan",
-        category: ["top", "estate", "udaipur"],
-        type: "Heritage Private Palace Stay",
+        category: ["villas", "pure-veg", "udaipur-abu"],
+        type: "Heritage Palace Estate",
+        isTop: true,
         bedrooms: 14,
         bathrooms: 14,
         capacity: "Up to 30+ Guests",
-        rating: "9.3/10",
-        badge: "Top Estate Contender",
-        badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/40",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
-        pricing: "Premium SaffronStays Entire Estate Package",
-        packageNotes: "Shared on SaffronStays by Devansh. Ample capacity for all 17+ with surplus bedrooms.",
-        elderAccessibility: "Heritage architecture, expansive ground courtyards, covered seating areas.",
-        jainFoodStatus: "On-site estate staff can customize pure veg/Jain menu; apartment units have kitchen counter.",
-        derasarAccess: "Convenient access to Udaipur city center Jain temples.",
-        keyPerks: [
-          "Sprawling 14 bedrooms – every couple gets a private wing",
-          "Grand royal Rajasthan experience for Diwali festive photo shoots",
-          "Covered open space for evening group activities",
-          "Apartment style rooms with kitchenette counter"
+        pricing: "SaffronStays Entire Palace Package",
+        packageDetails: "Discovered and shared by Devansh. Offers surplus bedrooms so every branch has independent quarters.",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Dedicated in-house estate chef to customize 100% vegetarian / Jain menu for all 5 days.",
+        derasarAccess: "Convenient car access to Udaipur city center derasars.",
+        elderAccess: "Expansive courtyards with flat paved corridors and ground floor room suites.",
+        amenities: "14 Ensuite royal rooms, private pool, sprawling open lawns, apartment units with counter space for tea.",
+        quotes: [
+          { author: "Rajvi Samveg Shah", text: "This looks good.", role: "Family Approval" },
+          { author: "Akshat Shah", text: "Lot of covered open space as per photo... not fully indoor but can work nicely.", role: "Layout Observation" },
+          { author: "Devansh & Hiteshkaku", text: "Apartment units allow easy induction setup for morning warm water & tea.", role: "Kitchen Practicality" }
         ],
-        whatsappRemarks: [
-          { member: "Rajvi Samveg Shah", quote: "This looks good.", tag: "Liked" },
-          { member: "Akshat Shah", quote: "Lot of covered open space as per photo... not fully indoor but can work nicely.", tag: "Layout Insight" },
-          { member: "Hiteshkaku & You", quote: "Checked kitchen facilities. Induction can easily be arranged for morning warm water / tea.", tag: "Kitchen Feasibility" }
-        ],
-        link: "https://www.saffronstays.com"
-      },
-      {
-        id: "risacca-amer",
-        name: "Risacca Amer & Jaipur Luxury Villas",
-        tagline: "12-Bedroom Sprawling Luxury Villa Estate",
-        location: "Amer, Jaipur, Rajasthan",
-        category: ["estate", "jaipur"],
-        type: "Entire Private Villa Estate",
-        bedrooms: 12,
-        bathrooms: 12,
-        capacity: "20-24 Guests",
-        rating: "9.2/10",
-        badge: "StayVista Estate",
-        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/40",
-        image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
-        pricing: "StayVista Exclusive Villa Tariff",
-        packageNotes: "Shared by Samveg for 12 rooms booked (Nov 6-11) for 20 adults.",
-        elderAccessibility: "Private estate compound with manicured gardens and easy single-estate logistics.",
-        jainFoodStatus: "Dedicated in-villa chef can cook 100% vegetarian & Jain meals for the family.",
-        derasarAccess: "Amer and northern Jaipur Jain temples within 15-20 min reach.",
-        keyPerks: [
-          "12 full private bedrooms under one estate",
-          "Private pool and outdoor lawns for Diwali celebrations",
-          "Close to Amer Fort and Jaipur sights"
-        ],
-        whatsappRemarks: [
-          { member: "Samveg", quote: "StayVista Risacca Amer link shared for 12 rooms / 20 adults.", tag: "Curated Estate" },
-          { member: "Dad", quote: "Accommodations where we face garden/nature fits our family together-concept.", tag: "Villa Alignment" }
-        ],
-        link: "https://www.stayvista.com"
+        url: "https://www.saffronstays.com"
       },
       {
         id: "fairmont-jaipur",
         name: "Fairmont Jaipur",
-        tagline: "5-Star Palatial Luxury with Dedicated All-Year Veg Kitchen",
+        tagline: "Palatial 5-Star Luxury with Dedicated All-Year Veg Kitchen",
         location: "Kukas, Jaipur, Rajasthan",
         category: ["jaipur"],
-        type: "Luxury Palace Hotel",
+        type: "Palace Hotel (Floor Block)",
+        isTop: false,
         bedrooms: "10+ Hotel Rooms",
         bathrooms: "10+ Ensuite",
-        capacity: "Flexible (17-25 Guests)",
-        rating: "9.0/10",
-        badge: "Luxury 5-Star",
-        badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/40",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
-        pricing: "Luxury Hotel Rack/Group Rate",
-        packageNotes: "Inquired by Devansh. Can commit one entire floor for the family + Suite with terrace.",
-        elderAccessibility: "World-class elevators, golf buggies, wheelchair accessible across all facilities.",
-        jainFoodStatus: "Has 1 dedicated all-year pure veg kitchen (out of 3). Private Dining Room provided.",
-        derasarAccess: "Jaipur city Jain Derasars 30-40 min away.",
-        keyPerks: [
-          "Dedicated 365-day separate pure veg kitchen",
-          "All family rooms can be placed on the exact same floor",
-          "Presidential/Suite terrace for evening gatherings",
-          "Private Dining Room for intimate family meals"
+        capacity: "Flexible (17–25 Guests)",
+        pricing: "Luxury Hotel Group Rate",
+        packageDetails: "Inquired by Devansh. Fairmont can dedicate an entire floor to the family with Private Dining Room for meals.",
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Operates 1 completely dedicated all-year pure vegetarian kitchen (out of 3). Private Dining Room assigned.",
+        derasarAccess: "30–40 minutes drive to Jaipur historical Jain temples.",
+        elderAccess: "Flawless elder accessibility: modern elevators, level corridors, golf buggy transfers across palace grounds.",
+        amenities: "Suite with private terrace for group evening gatherings, luxury spa, expansive gardens.",
+        quotes: [
+          { author: "Hiteshkaku", text: "Can check with Fairmont Jaipur.", role: "Lead Inquiry" },
+          { author: "Dad", text: "If possible, typical hotel building kind of property can be avoided with long lobbies and lifts where we are separated. Ground floor accommodation facing nature is better.", role: "Dad's Caveat" }
         ],
-        whatsappRemarks: [
-          { member: "Hiteshkaku", quote: "Can check with Fairmont Jaipur.", tag: "Suggestion" },
-          { member: "Dad", quote: "Typical hotel building kind of property can be avoided with long lobbies/lifts where we are separated... prefers cottage/nature facing.", tag: "Caution on Separation" }
-        ],
-        link: "https://maps.google.com"
+        url: "https://www.fairmont.com"
       },
       {
-        id: "postcard-rapti",
-        name: "The Postcard on the Rapti River",
-        tagline: "Ultra-boutique 22-key wildlife & river sanctuary",
-        location: "Chitwan National Park / Gir Concept",
-        category: ["estate"],
-        type: "Full Boutique Takeover",
-        bedrooms: "10-12 Rooms (out of 22)",
-        bathrooms: "All Ensuite",
-        capacity: "20+ Guests",
-        rating: "9.1/10",
-        badge: "Boutique Safari",
-        badgeColor: "bg-teal-500/20 text-teal-300 border-teal-500/40",
-        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
-        pricing: "Boutique Luxury Portfolio Tariff",
-        packageNotes: "Mom recalled great experience from Varanasi stay; suggested taking entire property like Gir.",
-        elderAccessibility: "Flat luxury nature cottages with scenic wildlife and river outlooks.",
-        jainFoodStatus: "Boutique kitchen can tailor 100% custom Jain dining menu for exclusive takeovers.",
-        derasarAccess: "Remote wildlife sanctuary; Jain derasar not adjacent.",
-        keyPerks: [
-          "Mom loved previous Postcard hospitality in Varanasi",
-          "Unparalleled tranquility and natural river setting",
-          "Personalized chef curation for the family"
+        id: "risacca-amer",
+        name: "Risacca Amer (StayVista)",
+        tagline: "12-Bedroom Sprawling Luxury Villa Estate",
+        location: "Amer, Jaipur, Rajasthan",
+        category: ["villas", "jaipur"],
+        type: "Entire Private Villa Estate",
+        isTop: false,
+        bedrooms: 12,
+        bathrooms: 12,
+        capacity: "20–24 Guests",
+        pricing: "StayVista Private Buyout",
+        packageDetails: "Shared by Samveg for 12 rooms (Nov 6–11) to host 20 adults seamlessly under one roof.",
+        image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Private in-villa culinary staff dedicated solely to preparing family pure veg and Jain dishes.",
+        derasarAccess: "Amer and North Jaipur Jain temples within 15–20 minutes.",
+        elderAccess: "Single-estate compound with landscaped lawns and direct outdoor room verandas.",
+        amenities: "12 Bedrooms, private pool, outdoor party lawn, close to scenic Amer foothills.",
+        quotes: [
+          { author: "Samveg", text: "StayVista Risacca Amer link shared for 12 rooms / 20 adults.", role: "Estate Contender" }
         ],
-        whatsappRemarks: [
-          { member: "Mom", quote: "We can take postcard gir whole and can plan menu accordingly, like Varanasi!", tag: "Mom's Memory" },
-          { member: "You", quote: "It is a 22 room property out of which you can take around 10 to 12 rooms.", tag: "Capacity Check" }
-        ],
-        link: "https://www.postcardresorts.com"
+        url: "https://www.stayvista.com"
       },
       {
-        id: "royal-family-jodhpur",
-        name: "Royal Family Vacation Residence",
-        tagline: "Heritage Residence of the Royal Family of Jodhpur",
-        location: "Near Fairmont / Raffles, Kukas, Jaipur",
+        id: "novotel-jaipur",
+        name: "Novotel Jaipur Convention Centre",
+        tagline: "Contemporary Hotel with Dedicated Veg Kitchen & Presidential Suite",
+        location: "Jaipur, Rajasthan",
         category: ["jaipur"],
-        type: "Heritage Royal Villa (6 Rooms)",
-        bedrooms: 6,
-        bathrooms: 6,
-        capacity: "12 Guests (Requires overflow rooms)",
-        rating: "8.5/10",
-        badge: "Historic Prestige",
-        badgeColor: "bg-amber-600/20 text-amber-300 border-amber-500/40",
-        image: "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?auto=format&fit=crop&w=800&q=80",
-        pricing: "Private Aristocratic Tariff",
-        packageNotes: "Available 6-11 Nov. Only 6 rooms; remaining guests must stay at Fairmont (2 mins away).",
-        elderAccessibility: "Heritage ground property with courtyard lawns.",
-        jainFoodStatus: "Can be made 100% Pure Veg if all 6 rooms are booked.",
-        derasarAccess: "30 mins to city temples.",
-        keyPerks: ["Royal lineage aesthetic", "Can be combined with Fairmont facilities"],
-        whatsappRemarks: [
-          { member: "You", quote: "Vacation residence of Jodhpur Royal Family. Only 6 rooms so will need to book overflow rooms at Fairmont/Raffles next door.", tag: "Split Risk" },
-          { member: "Dad's Note", quote: "Splitting the family across two sites contradicts the together-get-together plan.", tag: "Drawback" }
+        type: "Modern Hotel (Same Floor)",
+        isTop: false,
+        bedrooms: "10+ Hotel Rooms",
+        bathrooms: "10+ Ensuite",
+        capacity: "30+ Guests",
+        pricing: "Corporate Group Tariff",
+        packageDetails: "Hiteshkaku and Devansh verified: all family rooms can be placed on the exact same floor.",
+        image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Separate dedicated vegetarian kitchen on property.",
+        derasarAccess: "Jaipur city derasars 25 minutes away.",
+        elderAccess: "Full wheelchair and step-free elevator access; 35 mins from Jaipur airport.",
+        amenities: "Presidential Suite features personal kitchenette and dining area for family gathering and tea.",
+        quotes: [
+          { author: "Hiteshkaku", text: "Novotel Jaipur Convention Centre also has a separate veg kitchen. Presidential Suite comes with kitchenette and dining space.", role: "Kitchenette Feature" }
         ],
-        link: "https://maps.google.com"
+        url: "https://all.accor.com"
       },
       {
         id: "bloom-lake-pichola",
         name: "Bloom Boutique Lake Pichola",
         tagline: "Pure Veg Boutique Hotel by Lake Pichola",
         location: "Udaipur, Rajasthan",
-        category: ["udaipur"],
+        category: ["pure-veg", "udaipur-abu"],
         type: "Pure Veg Boutique Hotel",
+        isTop: false,
         bedrooms: "15 Available (28 Total)",
         bathrooms: "All Ensuite",
-        capacity: "17-25 Guests",
-        rating: "8.7/10",
-        badge: "100% Pure Veg",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40",
-        image: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800&q=80",
-        pricing: "Economical / Mid-Scale Boutique",
-        packageNotes: "Ahmedabad-based company. 15 rooms (including suites) available for dates.",
-        elderAccessibility: "Lake Pichola alleys have tighter vehicular drop-offs; requires stair climbing in old quarter.",
-        jainFoodStatus: "100% Pure Vegetarian hotel.",
-        derasarAccess: "Close to Udaipur inner city temples.",
-        keyPerks: ["Scenic Lake Pichola ambiance", "Guaranteed Pure Veg kitchen"],
-        whatsappRemarks: [
-          { member: "You", quote: "Pure Veg - 28 rooms total, 15 available for our dates. Ahmedabad based company.", tag: "Veg Verified" }
+        capacity: "17–25 Guests",
+        pricing: "Boutique Hospitality Rate",
+        packageDetails: "Ahmedabad-based chain. 15 rooms (including 8 suites) open for Diwali dates.",
+        image: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Entire hotel is 100% strictly Pure Vegetarian.",
+        derasarAccess: "Inner Udaipur city temples nearby.",
+        elderAccess: "Lake Pichola historic alleys can require walking and stairs; drop-off access tighter.",
+        amenities: "Rooftop lake views, modern heritage interiors, central Udaipur location.",
+        quotes: [
+          { author: "Devansh (You)", text: "Pure Veg - Total 28 rooms including 8 suites. 15 rooms available for our dates. Ahmedabad based company.", role: "Boutique Review" }
         ],
-        link: "https://staybloom.com"
+        url: "https://staybloom.com"
       },
       {
-        id: "novotel-jaipur",
-        name: "Novotel Jaipur Convention Centre",
-        tagline: "Modern Hotel with Dedicated Veg Kitchen & Presidential Suite",
-        location: "Jaipur, Rajasthan",
-        category: ["jaipur"],
-        type: "Business / Convention Hotel",
-        bedrooms: "10+ Hotel Rooms",
+        id: "postcard-rapti",
+        name: "The Postcard on the Rapti River",
+        tagline: "Ultra-boutique 22-Key River Nature Sanctuary",
+        location: "Chitwan / Gir Concept",
+        category: ["villas"],
+        isTop: false,
+        type: "Boutique Estate Takeover",
+        bedrooms: "10–12 Rooms (out of 22)",
         bathrooms: "All Ensuite",
-        capacity: "30+ Guests",
-        rating: "8.4/10",
-        badge: "Veg Kitchen Confirmed",
-        badgeColor: "bg-slate-700 text-slate-300 border-slate-600",
-        image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80",
-        pricing: "Corporate Group Tariff",
-        packageNotes: "Rooms on same floor confirmed. Presidential Suite includes private kitchenette & dining space.",
-        elderAccessibility: "Modern elevators, step-free access, 35 mins from Jaipur airport.",
-        jainFoodStatus: "Separate dedicated vegetarian kitchen.",
-        derasarAccess: "City center temples accessible.",
-        keyPerks: ["Kitchenette in Presidential suite for family tea", "35 mins from Jaipur airport"],
-        whatsappRemarks: [
-          { member: "Hiteshkaku", quote: "Hotel Novotel Jaipur Convention Centre also has a separate veg kitchen. Presidential Suite comes with kitchenette and dining space.", tag: "Feature Spot" },
-          { member: "Dad", quote: "Avoid typical hotel building with long lobbies and elevators where we get separated.", tag: "Vibe Mismatch" }
+        capacity: "20+ Guests",
+        pricing: "Postcard Luxury Tariff",
+        packageDetails: "Inspired by family’s beloved Varanasi Postcard trip. Taking 10–12 rooms of 22 keys.",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80",
+        jainStatus: "Boutique private kitchen can be instructed to prepare custom 100% Jain menus.",
+        derasarAccess: "Wilderness retreat; traditional Jain derasar not adjacent.",
+        elderAccess: "Single-level individual cottages surrounded by nature; very gentle walking paths.",
+        amenities: "Riverfront dining, tranquil lawns, tailored personalized hospitality.",
+        quotes: [
+          { author: "Mom", text: "We can take Postcard whole and can plan menu accordingly, like Varanasi!", role: "Mom's Preference" }
         ],
-        link: "https://all.accor.com"
+        url: "https://www.postcardresorts.com"
       }
     ];
 
     // State
-    let currentFilter = 'all';
+    let activeFilter = 'all';
     let searchQuery = '';
-    let currentSort = 'recommended';
-    let selectedVoter = null;
-    let votes = JSON.parse(localStorage.getItem('diwali_family_votes_2026') || '{}');
+    let sortMode = 'recommended';
+    let selectedMember = null;
+    let votes = JSON.parse(localStorage.getItem('diwali_family_votes_clean_2026') || '{}');
 
-    function renderProperties() {
-      const container = document.getElementById('propertyGrid');
-      container.innerHTML = '';
+    function renderStayCards() {
+      const grid = document.getElementById('propertyGrid');
+      grid.innerHTML = '';
 
-      let list = properties.filter(item => {
-        const matchesCategory = currentFilter === 'all' || item.category.includes(currentFilter);
-        const matchesSearch = !searchQuery || 
-          item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.whatsappRemarks.some(r => r.member.toLowerCase().includes(searchQuery.toLowerCase()) || r.quote.toLowerCase().includes(searchQuery.toLowerCase()));
-        return matchesCategory && matchesSearch;
+      let list = stays.filter(stay => {
+        const matchesCat = activeFilter === 'all' || stay.category.includes(activeFilter);
+        const q = searchQuery.toLowerCase();
+        const matchesQuery = !q || 
+          stay.name.toLowerCase().includes(q) ||
+          stay.location.toLowerCase().includes(q) ||
+          stay.jainStatus.toLowerCase().includes(q) ||
+          stay.elderAccess.toLowerCase().includes(q) ||
+          stay.quotes.some(r => r.author.toLowerCase().includes(q) || r.text.toLowerCase().includes(q));
+        return matchesCat && matchesQuery;
       });
 
-      // Sorting
-      if (currentSort === 'rooms-desc') {
-        list.sort((a, b) => {
-          const rA = parseInt(a.bedrooms) || 10;
-          const rB = parseInt(b.bedrooms) || 10;
-          return rB - rA;
-        });
+      if (sortMode === 'rooms-desc') {
+        list.sort((a, b) => (parseInt(b.bedrooms) || 10) - (parseInt(a.bedrooms) || 10));
+      } else if (sortMode === 'capacity-desc') {
+        list.sort((a, b) => parseInt(b.capacity.match(/\d+/)?.[0] || 20) - parseInt(a.capacity.match(/\d+/)?.[0] || 20));
+      } else {
+        // Recommended: Top contenders first
+        list.sort((a, b) => (b.isTop ? 1 : 0) - (a.isTop ? 1 : 0));
       }
 
       if (list.length === 0) {
-        container.innerHTML = `
-          <div class="col-span-full py-12 text-center text-slate-400 glass-card rounded-2xl">
-            <i class="ph-bold ph-magnifying-glass text-4xl text-slate-500 mb-2"></i>
-            <p class="text-base font-semibold text-slate-200">No properties matched your criteria</p>
-            <p class="text-xs text-slate-500 mt-1">Try resetting the search bar or changing filters.</p>
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center border border-hairline rounded bg-surface p-8">
+            <p class="font-serif text-lg text-ink">No stays matched the criteria.</p>
+            <p class="text-xs text-muted mt-1">Try clearing the search query or switching filters.</p>
           </div>
         `;
         return;
       }
 
-      list.forEach(prop => {
+      list.forEach(item => {
         const card = document.createElement('div');
-        card.className = "glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300";
-        
-        // Member remarks pill preview
-        const firstRemark = prop.whatsappRemarks && prop.whatsappRemarks[0] ? prop.whatsappRemarks[0] : null;
+        card.className = "rounded border border-hairline bg-surface flex flex-col justify-between hover:border-borderDark transition-all duration-200 overflow-hidden";
+
+        const primaryQuote = item.quotes && item.quotes[0] ? item.quotes[0] : null;
 
         card.innerHTML = `
           <div>
-            <!-- Image & Tag Overlays -->
-            <div class="relative h-48 sm:h-52 w-full overflow-hidden group">
-              <img src="${prop.image}" alt="${prop.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x500/141e30/ecc94b?text=${encodeURIComponent(prop.name)}'">
-              <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent"></div>
+            <!-- Image & Meta Badges -->
+            <div class="relative h-48 w-full overflow-hidden bg-subtle">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/900x500/F4F3F0/1A1917?text=${encodeURIComponent(item.name)}'">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               
-              <!-- Badges -->
-              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md ${prop.badgeColor}">
-                  ${prop.badge}
-                </span>
-                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-royal-950/80 text-gold-300 border border-gold-500/30">
-                  ${prop.type}
+              <div class="absolute top-3 left-3 flex items-center gap-1.5">
+                ${item.isTop ? `
+                  <span class="px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-semibold bg-surface/95 text-ink shadow-sm">
+                    Frontrunner
+                  </span>
+                ` : ''}
+                <span class="px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-medium bg-surface/85 text-muted backdrop-blur-sm">
+                  ${item.type}
                 </span>
               </div>
 
-              <!-- Location Tag -->
-              <div class="absolute bottom-2.5 left-3 flex items-center gap-1.5 text-xs text-slate-300">
-                <i class="ph-fill ph-map-pin text-amber-400"></i>
-                <span class="font-medium">${prop.location}</span>
+              <div class="absolute bottom-2.5 left-3 text-surface text-xs font-medium flex items-center gap-1 drop-shadow-sm">
+                <i class="ph ph-map-pin"></i> ${item.location}
               </div>
 
-              <!-- Quick Specs Pill -->
-              <div class="absolute bottom-2.5 right-3 text-[11px] font-bold bg-royal-900/90 text-gold-400 px-2 py-0.5 rounded-md border border-gold-500/20">
-                ${prop.bedrooms} BR / ${prop.capacity}
+              <div class="absolute bottom-2.5 right-3 text-surface text-[11px] font-mono px-2 py-0.5 rounded bg-black/50 backdrop-blur-sm">
+                ${item.bedrooms} BR • ${item.capacity}
               </div>
             </div>
 
-            <!-- Content Area -->
-            <div class="p-4 space-y-3">
+            <!-- Content -->
+            <div class="p-4 space-y-3.5">
               <div>
-                <h4 class="text-lg font-serif font-bold text-white tracking-wide">${prop.name}</h4>
-                <p class="text-xs text-slate-300 line-clamp-1 mt-0.5">${prop.tagline}</p>
+                <h4 class="font-serif text-lg font-normal text-ink leading-snug">${item.name}</h4>
+                <p class="text-xs text-muted line-clamp-1 mt-0.5">${item.tagline}</p>
               </div>
 
-              <!-- Key Evaluation Pillars -->
-              <div class="grid grid-cols-2 gap-2 text-[11px]">
-                <div class="bg-royal-950/70 p-2 rounded-lg border border-slate-800">
-                  <span class="text-slate-400 block text-[10px] uppercase font-semibold flex items-center gap-1">
-                    <i class="ph-bold ph-fork-knife text-emerald-400"></i> Jain Food
-                  </span>
-                  <span class="text-slate-200 line-clamp-2 mt-0.5 font-medium leading-tight">${prop.jainFoodStatus}</span>
+              <!-- Critical Assessment Columns -->
+              <div class="space-y-2 border-t border-hairline pt-3 text-[11px]">
+                <div>
+                  <span class="font-medium text-ink block text-[10px] uppercase tracking-wider text-muted">Jain & Pure Veg</span>
+                  <p class="text-muted leading-relaxed line-clamp-2 mt-0.5">${item.jainStatus}</p>
                 </div>
-                <div class="bg-royal-950/70 p-2 rounded-lg border border-slate-800">
-                  <span class="text-slate-400 block text-[10px] uppercase font-semibold flex items-center gap-1">
-                    <i class="ph-bold ph-wheelchair text-amber-400"></i> Elder Access
-                  </span>
-                  <span class="text-slate-200 line-clamp-2 mt-0.5 font-medium leading-tight">${prop.elderAccessibility}</span>
+                <div>
+                  <span class="font-medium text-ink block text-[10px] uppercase tracking-wider text-muted">Elder Accessibility</span>
+                  <p class="text-muted leading-relaxed line-clamp-2 mt-0.5">${item.elderAccess}</p>
                 </div>
               </div>
 
-              <!-- Derasar Access pill -->
-              <div class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-emerald-950/30 border border-emerald-500/30 text-emerald-300 text-xs">
-                <i class="ph-fill ph-flower-lotus text-sm flex-shrink-0"></i>
-                <span class="text-[11px] truncate"><strong class="font-semibold">Derasar:</strong> ${prop.derasarAccess}</span>
+              <!-- Derasar Badge -->
+              <div class="p-2 rounded bg-subtle text-[11px] text-muted flex items-start gap-1.5">
+                <i class="ph ph-sun text-bronze mt-0.5"></i>
+                <span class="line-clamp-1"><strong class="text-ink font-medium">Derasar:</strong> ${item.derasarAccess}</span>
               </div>
 
-              <!-- WhatsApp Chat Quote Callout -->
-              ${firstRemark ? `
-                <div class="bg-gold-500/5 border-l-2 border-gold-500 p-2.5 rounded-r-lg space-y-1">
-                  <div class="flex items-center justify-between text-[11px]">
-                    <span class="font-bold text-gold-400 flex items-center gap-1">
-                      <i class="ph-bold ph-whatsapp-logo text-emerald-400"></i> ${firstRemark.member}
-                    </span>
-                    <span class="text-[10px] text-slate-400 font-mono">${firstRemark.tag}</span>
+              <!-- Family Quote Snippet -->
+              ${primaryQuote ? `
+                <div class="border-l border-bronze pl-2.5 py-0.5 space-y-0.5 bg-bronze-subtle/40 rounded-r">
+                  <div class="text-[10px] text-muted font-medium flex items-center justify-between">
+                    <span class="text-ink">${primaryQuote.author}</span>
+                    <span class="font-mono text-[9px] uppercase tracking-wider">${primaryQuote.role}</span>
                   </div>
-                  <p class="text-[11px] text-slate-300 italic line-clamp-2">"${firstRemark.quote}"</p>
+                  <p class="text-[11px] text-muted italic line-clamp-2">"${primaryQuote.text}"</p>
                 </div>
               ` : ''}
 
-              <!-- Pricing Highlight if present -->
-              ${prop.pricing ? `
-                <div class="text-[11px] text-slate-300 bg-royal-950/50 p-2 rounded-lg border border-slate-800/80">
-                  <span class="text-gold-400 font-bold"><i class="ph-bold ph-currency-inr"></i> Package:</span> ${prop.pricing}
+              <!-- Pricing Pill -->
+              ${item.pricing ? `
+                <div class="text-[11px] text-muted pt-1">
+                  <span class="font-medium text-ink">Package:</span> ${item.pricing}
                 </div>
               ` : ''}
             </div>
           </div>
 
-          <!-- Card Actions Footer -->
-          <div class="p-4 pt-0 flex items-center gap-2">
-            <button onclick="openDetailModal('${prop.id}')" class="flex-1 py-2 px-3 rounded-lg bg-royal-800 hover:bg-royal-700 text-gold-300 border border-gold-500/30 text-xs font-semibold flex items-center justify-center gap-1 transition-all">
-              <i class="ph-bold ph-info"></i> Full Details & Layout
+          <!-- Card Actions -->
+          <div class="p-4 pt-0 border-t border-hairline flex items-center gap-2 mt-2">
+            <button onclick="openDetailModal('${item.id}')" class="flex-1 py-1.5 px-3 rounded border border-border text-xs text-ink hover:bg-subtle transition-colors text-center font-medium">
+              View Architecture & Details
             </button>
-            <button onclick="quickVoteFor('${prop.name}')" title="Vote for this stay" class="py-2 px-3 rounded-lg bg-gradient-to-r from-marigold-500 to-amber-500 hover:from-marigold-400 hover:to-amber-400 text-royal-950 text-xs font-bold flex items-center gap-1 transition-all">
-              <i class="ph-fill ph-heart"></i>
+            <button onclick="quickSelectStay('${item.name}')" title="Vote for this option" class="p-1.5 rounded border border-border text-xs text-muted hover:text-ink hover:bg-subtle transition-colors">
+              <i class="ph ph-heart text-sm"></i>
             </button>
           </div>
         `;
 
-        container.appendChild(card);
+        grid.appendChild(card);
       });
     }
 
     function openDetailModal(id) {
-      const prop = properties.find(p => p.id === id);
-      if (!prop) return;
+      const stay = stays.find(s => s.id === id);
+      if (!stay) return;
 
-      const header = document.getElementById('modalHeaderContent');
+      const header = document.getElementById('detailModalHeader');
       header.innerHTML = `
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded text-[10px] font-bold ${prop.badgeColor}">${prop.badge}</span>
-          <span class="text-xs text-slate-400"><i class="ph-bold ph-map-pin"></i> ${prop.location}</span>
-        </div>
-        <h3 class="text-xl font-serif font-bold text-gold-300 mt-0.5">${prop.name}</h3>
+        <span class="text-[10px] uppercase tracking-widest text-bronze font-medium">${stay.location} • ${stay.type}</span>
+        <h4 class="font-serif text-xl font-normal text-ink mt-0.5">${stay.name}</h4>
       `;
 
-      const body = document.getElementById('modalBodyContent');
+      const body = document.getElementById('detailModalBody');
       body.innerHTML = `
-        <!-- Main Image Banner -->
-        <div class="relative h-60 rounded-xl overflow-hidden border border-gold-500/20">
-          <img src="${prop.image}" alt="${prop.name}" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-transparent to-transparent"></div>
-          <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
-            <span class="bg-royal-950/80 px-3 py-1 rounded-md border border-gold-500/30 font-semibold">${prop.type}</span>
-            <span class="bg-royal-950/80 px-3 py-1 rounded-md border border-gold-500/30 font-semibold">${prop.bedrooms} Bedrooms | ${prop.capacity}</span>
+        <div class="relative h-56 rounded overflow-hidden bg-subtle">
+          <img src="${stay.image}" alt="${stay.name}" class="w-full h-full object-cover">
+          <div class="absolute bottom-2 left-3 right-3 flex justify-between text-xs text-surface bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded">
+            <span>${stay.bedrooms} Bedrooms</span>
+            <span>Capacity: ${stay.capacity}</span>
           </div>
         </div>
 
-        <!-- Specifications Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div class="p-3 bg-royal-950 rounded-xl border border-slate-800">
-            <span class="text-[10px] text-slate-400 uppercase font-semibold flex items-center gap-1.5">
-              <i class="ph-bold ph-fork-knife text-emerald-400"></i> Jain Food Setup
-            </span>
-            <p class="text-xs text-slate-200 mt-1 font-medium">${prop.jainFoodStatus}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded border border-hairline bg-subtle space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-muted font-medium block">Dining & Kitchen</span>
+            <p class="text-ink leading-relaxed">${stay.jainStatus}</p>
           </div>
-          <div class="p-3 bg-royal-950 rounded-xl border border-slate-800">
-            <span class="text-[10px] text-slate-400 uppercase font-semibold flex items-center gap-1.5">
-              <i class="ph-bold ph-flower-lotus text-emerald-400"></i> Derasar Puja Proximity
-            </span>
-            <p class="text-xs text-slate-200 mt-1 font-medium">${prop.derasarAccess}</p>
-          </div>
-          <div class="p-3 bg-royal-950 rounded-xl border border-slate-800">
-            <span class="text-[10px] text-slate-400 uppercase font-semibold flex items-center gap-1.5">
-              <i class="ph-bold ph-wheelchair text-amber-400"></i> Accessibility & Elevators
-            </span>
-            <p class="text-xs text-slate-200 mt-1 font-medium">${prop.elderAccessibility}</p>
+          <div class="p-3 rounded border border-hairline bg-subtle space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-muted font-medium block">Elder Access</span>
+            <p class="text-ink leading-relaxed">${stay.elderAccess}</p>
           </div>
         </div>
 
-        ${prop.pricing ? `
-          <!-- Pricing Breakdown -->
-          <div class="p-4 bg-royal-950/80 rounded-xl border border-gold-500/30">
-            <h5 class="text-xs uppercase tracking-wider font-bold text-gold-400 mb-1 flex items-center gap-1.5">
-              <i class="ph-bold ph-receipt"></i> Rates & Package Breakdown (Nov 6–11, 2026)
-            </h5>
-            <div class="text-sm font-semibold text-white">${prop.pricing}</div>
-            <p class="text-xs text-slate-400 mt-1">${prop.packageNotes || ''}</p>
-            ${prop.termsNotes ? `<p class="text-[11px] text-amber-300/80 mt-1.5 border-t border-slate-800 pt-1.5"><strong>Guidelines:</strong> ${prop.termsNotes}</p>` : ''}
+        ${stay.packageDetails ? `
+          <div class="p-3.5 rounded border border-bronze-border bg-bronze-subtle space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-bronze font-medium block">Rates & Package Breakdown</span>
+            <p class="font-medium text-ink">${stay.pricing}</p>
+            <p class="text-muted leading-relaxed">${stay.packageDetails}</p>
+            ${stay.rules ? `<p class="text-[11px] text-muted pt-1 border-t border-bronze-border/60"><strong>House Rules:</strong> ${stay.rules}</p>` : ''}
           </div>
         ` : ''}
 
-        ${prop.floors ? `
-          <!-- Floor by Floor Breakdown (Crucial for Mijmaan) -->
+        ${stay.floors ? `
           <div class="space-y-2">
-            <h5 class="text-xs uppercase tracking-wider font-bold text-gold-400 flex items-center gap-1.5">
-              <i class="ph-bold ph-stairs"></i> Detailed Floor-by-Floor Architecture
-            </h5>
-            <div class="grid grid-cols-1 gap-2">
-              ${prop.floors.map(f => `
-                <div class="p-3 rounded-lg bg-royal-950 border border-slate-800">
-                  <div class="text-xs font-bold text-white text-gold-300">${f.floor}</div>
-                  <div class="text-xs text-slate-300 mt-0.5 leading-relaxed">${f.desc}</div>
+            <span class="text-[10px] uppercase tracking-wider text-muted font-medium block">Floor-by-Floor Breakdown</span>
+            <div class="space-y-1.5">
+              ${stay.floors.map(f => `
+                <div class="p-2.5 rounded border border-hairline bg-surface">
+                  <div class="font-medium text-ink">${f.name}</div>
+                  <div class="text-muted text-[11px] leading-relaxed mt-0.5">${f.spec}</div>
                 </div>
               `).join('')}
             </div>
           </div>
         ` : ''}
 
-        <!-- WhatsApp Chat Feedback -->
         <div class="space-y-2">
-          <h5 class="text-xs uppercase tracking-wider font-bold text-slate-300 flex items-center gap-1.5">
-            <i class="ph-bold ph-chat-teardrop-text text-emerald-400"></i> WhatsApp Group Chat Mentions
-          </h5>
+          <span class="text-[10px] uppercase tracking-wider text-muted font-medium block">WhatsApp Group Dialogue</span>
           <div class="space-y-2">
-            ${prop.whatsappRemarks.map(r => `
-              <div class="p-3 rounded-xl bg-royal-950/90 border border-slate-800/80 flex items-start gap-3">
-                <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center font-bold text-gold-400 text-xs shrink-0">
-                  ${r.member.charAt(0)}
+            ${stay.quotes.map(q => `
+              <div class="p-3 rounded border border-hairline bg-surface space-y-1">
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="font-medium text-ink">${q.author}</span>
+                  <span class="text-[10px] text-muted font-mono">${q.role}</span>
                 </div>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-white">${r.member}</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">${r.tag}</span>
-                  </div>
-                  <p class="text-xs text-slate-300 mt-1 italic">"${r.quote}"</p>
-                </div>
+                <p class="text-muted italic leading-relaxed">"${q.text}"</p>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- External Link -->
-        <div class="text-right">
-          <a href="${prop.link}" target="_blank" class="inline-flex items-center gap-1 text-xs text-gold-400 hover:text-gold-300 underline font-semibold">
-            Visit Original Link <i class="ph-bold ph-arrow-square-out"></i>
+        <div class="pt-2 text-right">
+          <a href="${stay.url}" target="_blank" class="inline-flex items-center gap-1 text-xs text-ink hover:text-bronze underline font-medium">
+            Open Original Property Listing <i class="ph ph-arrow-up-right"></i>
           </a>
         </div>
       `;
@@ -942,155 +810,150 @@
       document.getElementById('detailModal').classList.add('hidden');
     }
 
-    function toggleCompareModal() {
-      const modal = document.getElementById('compareModal');
-      const isHidden = modal.classList.contains('hidden');
-      
+    function toggleCompareDrawer() {
+      const drawer = document.getElementById('compareDrawer');
+      const isHidden = drawer.classList.contains('hidden');
       if (isHidden) {
-        populateCompareTable();
-        modal.classList.remove('hidden');
+        renderMatrixRows();
+        drawer.classList.remove('hidden');
       } else {
-        modal.classList.add('hidden');
+        drawer.classList.add('hidden');
       }
     }
 
-    function populateCompareTable() {
-      const tbody = document.getElementById('compareTableBody');
+    function renderMatrixRows() {
+      const tbody = document.getElementById('matrixTableBody');
       tbody.innerHTML = '';
 
-      properties.forEach(p => {
+      stays.forEach(s => {
         const tr = document.createElement('tr');
-        tr.className = "hover:bg-royal-950/60 transition-colors";
+        tr.className = "hover:bg-subtle/50 transition-colors";
         
-        const firstRemark = p.whatsappRemarks && p.whatsappRemarks[0] ? `"${p.whatsappRemarks[0].quote.substring(0, 75)}..."` : 'Explored';
+        const firstQuote = s.quotes[0] ? `"${s.quotes[0].text.substring(0, 70)}..."` : '—';
 
         tr.innerHTML = `
-          <td class="p-3 font-bold text-white flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full ${p.category.includes('top') ? 'bg-emerald-400' : 'bg-slate-500'}"></span>
-            ${p.name}
+          <td class="py-3 pr-4 font-medium text-ink whitespace-nowrap">
+            ${s.name}
+            ${s.isTop ? '<span class="ml-1 text-[9px] uppercase px-1.5 py-0.2 rounded bg-subtle text-bronze border border-hairline">Top</span>' : ''}
           </td>
-          <td class="p-3 text-slate-300">${p.location}<br><span class="text-[10px] text-slate-400 font-mono">${p.type}</span></td>
-          <td class="p-3 text-slate-200"><strong>${p.bedrooms} BR</strong><br><span class="text-[10px] text-slate-400">${p.capacity}</span></td>
-          <td class="p-3 text-slate-300 text-[11px]">${p.jainFoodStatus}</td>
-          <td class="p-3 text-slate-300 text-[11px]">${p.derasarAccess}</td>
-          <td class="p-3 text-slate-300 text-[11px]">${p.elderAccessibility}</td>
-          <td class="p-3 font-semibold text-gold-400 text-[11px]">${p.pricing || 'On Request'}</td>
-          <td class="p-3 text-slate-300 text-[11px] italic">${firstRemark}</td>
+          <td class="py-3 pr-4 text-muted whitespace-nowrap">${s.location}<br><span class="text-[10px] text-muted">${s.type}</span></td>
+          <td class="py-3 pr-4 text-ink font-mono whitespace-nowrap">${s.bedrooms} BR<br><span class="text-[10px] text-muted font-sans">${s.capacity}</span></td>
+          <td class="py-3 pr-4 text-muted max-w-[180px]">${s.jainStatus}</td>
+          <td class="py-3 pr-4 text-muted max-w-[160px]">${s.derasarAccess}</td>
+          <td class="py-3 pr-4 text-muted max-w-[180px]">${s.elderAccess}</td>
+          <td class="py-3 pr-4 text-ink font-mono text-[11px] whitespace-nowrap">${s.pricing || 'On request'}</td>
+          <td class="py-3 text-muted italic max-w-[180px]">${firstQuote}</td>
         `;
-
         tbody.appendChild(tr);
       });
     }
 
-    function selectVoter(name) {
-      selectedVoter = name;
-      document.querySelectorAll('.voter-btn').forEach(btn => {
-        btn.classList.remove('border-gold-500', 'bg-gold-500/10');
-        if (btn.querySelector('.text-white').textContent === name) {
-          btn.classList.add('border-gold-500', 'bg-gold-500/10');
+    function selectMember(name) {
+      selectedMember = name;
+      document.querySelectorAll('.member-btn').forEach(btn => {
+        if (btn.querySelector('.font-medium').textContent.trim() === name) {
+          btn.className = "member-btn text-left p-2 rounded border border-ink bg-subtle transition-colors";
+        } else {
+          btn.className = "member-btn text-left p-2 rounded border border-hairline hover:border-ink transition-colors";
         }
       });
     }
 
     function submitVote() {
-      if (!selectedVoter) {
-        showFloatingToast('Please select your family member profile first!');
+      if (!selectedMember) {
+        showToast('Please select which family member you are first.');
         return;
       }
 
-      const choice = document.getElementById('voteChoice').value;
-      const note = document.getElementById('voteComment').value.trim();
+      const choice = document.getElementById('voteOptionSelect').value;
+      const condition = document.getElementById('voteConditionInput').value.trim();
 
-      votes[selectedVoter] = {
-        property: choice,
-        note: note,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      votes[selectedMember] = {
+        stay: choice,
+        note: condition,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
 
-      localStorage.setItem('diwali_family_votes_2026', JSON.stringify(votes));
-      document.getElementById('voteComment').value = '';
-      updatePollUI();
-      showFloatingToast(`Vote logged for ${selectedVoter}: ${choice.split('–')[0].split(',')[0]}!`);
+      localStorage.setItem('diwali_family_votes_clean_2026', JSON.stringify(votes));
+      document.getElementById('voteConditionInput').value = '';
+      updateConsensusUI();
+      showToast(`Vote recorded for ${selectedMember}.`);
     }
 
-    function quickVoteFor(propertyName) {
+    function quickSelectStay(stayName) {
       scrollToPoll();
-      const select = document.getElementById('voteChoice');
+      const select = document.getElementById('voteOptionSelect');
       for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].text.includes(propertyName) || propertyName.includes(select.options[i].value)) {
+        if (select.options[i].text.includes(stayName) || stayName.includes(select.options[i].value)) {
           select.selectedIndex = i;
           break;
         }
       }
-      showFloatingToast(`Selected ${propertyName.split('–')[0]}. Choose your name to confirm!`);
+      showToast(`Selected ${stayName}. Tap your name above to cast your vote!`);
     }
 
-    function updatePollUI() {
+    function updateConsensusUI() {
       const tally = {
         "MIJMAAN – The Villa, Udaipur": 0,
         "Abu House, Mount Abu": 0,
         "Shikargarh Palace, Udaipur": 0,
         "Fairmont Jaipur": 0,
-        "Risacca Amer / Jaipur Luxury Villas": 0,
-        "The Postcard Chitwan / Gir": 0
+        "Risacca Amer, Jaipur": 0,
+        "The Postcard on Rapti River / Gir": 0,
+        "Novotel Jaipur": 0,
+        "Bloom Lake Pichola, Udaipur": 0
       };
 
-      const voterNames = Object.keys(votes);
-      const totalCount = voterNames.length;
+      const voterKeys = Object.keys(votes);
+      const totalCount = voterKeys.length;
 
-      document.getElementById('totalVotesRegistered').textContent = totalCount;
+      document.getElementById('votesRegisteredCount').textContent = totalCount;
       document.getElementById('voteCountBadge').textContent = totalCount;
 
-      voterNames.forEach(member => {
-        const choice = votes[member].property;
-        if (tally[choice] !== undefined) {
-          tally[choice]++;
-        } else if (choice.includes("Aloha") || choice.includes("Rishikesh")) {
-          // migrate or drop older stored Rishikesh votes to Abu House / Mijmaan
-          tally["MIJMAAN – The Villa, Udaipur"]++;
+      voterKeys.forEach(k => {
+        const itemChoice = votes[k].stay;
+        if (tally[itemChoice] !== undefined) {
+          tally[itemChoice]++;
         } else {
-          tally[choice] = 1;
+          tally["MIJMAAN – The Villa, Udaipur"]++;
         }
       });
 
-      const barsContainer = document.getElementById('voteBars');
-      barsContainer.innerHTML = '';
+      const barsBox = document.getElementById('voteResultsContainer');
+      barsBox.innerHTML = '';
 
-      Object.entries(tally).forEach(([name, count]) => {
-        const percentage = totalCount > 0 ? Math.round((count / totalCount) * 100) : 0;
+      Object.entries(tally).forEach(([label, count]) => {
+        const pct = totalCount > 0 ? Math.round((count / totalCount) * 100) : 0;
         
         const row = document.createElement('div');
         row.className = "space-y-1";
         row.innerHTML = `
           <div class="flex justify-between items-center text-xs">
-            <span class="font-medium text-slate-200">${name}</span>
-            <span class="font-bold text-gold-400">${count} votes (${percentage}%)</span>
+            <span class="text-ink font-medium">${label.split('–')[0]}</span>
+            <span class="text-muted font-mono">${count} (${pct}%)</span>
           </div>
-          <div class="w-full bg-royal-900 rounded-full h-2.5 overflow-hidden border border-slate-800">
-            <div class="bg-gradient-to-r from-amber-500 to-gold-400 h-2.5 rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
+          <div class="w-full bg-subtle rounded-full h-1.5 overflow-hidden">
+            <div class="bg-ink h-1.5 rounded-full transition-all duration-300" style="width: ${pct}%"></div>
           </div>
         `;
-        barsContainer.appendChild(row);
+        barsBox.appendChild(row);
       });
 
-      // Vote Feed
-      const feed = document.getElementById('voteFeed');
+      // Member comments log
+      const feed = document.getElementById('memberVoteFeed');
       if (totalCount === 0) {
-        feed.innerHTML = `<span class="text-slate-500 italic text-[11px]">No votes submitted yet. Click your name on the left to cast a vote!</span>`;
+        feed.innerHTML = `<span class="italic text-muted">No family votes registered yet. Select a profile to vote!</span>`;
       } else {
-        feed.innerHTML = voterNames.map(member => {
-          const v = votes[member];
-          const displayChoice = (v.property.includes("Aloha") || v.property.includes("Rishikesh")) 
-            ? "MIJMAAN – The Villa, Udaipur" 
-            : v.property.split('–')[0].split(',')[0];
+        feed.innerHTML = voterKeys.map(k => {
+          const v = votes[k];
           return `
-            <div class="py-1 px-2 rounded bg-royal-900/60 border border-slate-800/80 flex items-center justify-between text-[11px]">
+            <div class="py-1 px-2 rounded bg-subtle flex items-center justify-between">
               <div>
-                <strong class="text-gold-300">${member}:</strong> 
-                <span class="text-slate-300">${displayChoice}</span>
-                ${v.note ? `<span class="text-slate-400 italic font-mono text-[10px] ml-1">("${v.note}")</span>` : ''}
+                <strong class="text-ink font-medium">${k}:</strong> 
+                <span class="text-muted">${v.stay.split('–')[0].split(',')[0]}</span>
+                ${v.note ? `<span class="text-muted italic ml-1">("${v.note}")</span>` : ''}
               </div>
-              <span class="text-[10px] text-slate-500">${v.timestamp}</span>
+              <span class="text-[10px] text-muted font-mono">${v.time}</span>
             </div>
           `;
         }).join('');
@@ -1099,88 +962,82 @@
 
     function resetVotes() {
       votes = {};
-      localStorage.removeItem('diwali_family_votes_2026');
-      updatePollUI();
-      showFloatingToast('All voting logs have been reset for fresh session.');
+      localStorage.removeItem('diwali_family_votes_clean_2026');
+      updateConsensusUI();
+      showToast('All voting preferences cleared.');
     }
 
     function scrollToPoll() {
-      const el = document.getElementById('pollSection');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      document.getElementById('pollSection').scrollIntoView({ behavior: 'smooth' });
     }
 
-    function showFloatingToast(message) {
-      const toast = document.createElement('div');
-      toast.className = "fixed bottom-5 right-5 z-50 px-4 py-2.5 rounded-xl bg-gold-500 text-royal-950 font-bold text-xs shadow-2xl flex items-center gap-2 transform transition-all duration-300";
-      toast.innerHTML = `<i class="ph-bold ph-bell-ringing text-base"></i> ${message}`;
-      document.body.appendChild(toast);
+    function showToast(msg) {
+      const toast = document.getElementById('toastMessage');
+      toast.textContent = msg;
+      toast.style.opacity = '1';
       setTimeout(() => {
         toast.style.opacity = '0';
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
+      }, 3000);
     }
 
-    // Filter and Search handlers
-    function setFilter(category) {
-      currentFilter = category;
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        if (btn.dataset.category === category) {
-          btn.className = "tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-gold-500 text-royal-950 font-bold shadow-sm";
+    // Filter and search handlers
+    function setFilter(cat) {
+      activeFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.category === cat) {
+          btn.className = "filter-btn px-3 py-1.5 rounded text-xs font-medium bg-ink text-surface transition-all";
         } else {
-          btn.className = "tab-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-royal-800 transition-all";
+          btn.className = "filter-btn px-3 py-1.5 rounded text-xs font-medium text-muted hover:text-ink hover:bg-subtle transition-all";
         }
       });
-      renderProperties();
+      renderStayCards();
     }
 
     function handleSearch() {
       searchQuery = document.getElementById('searchInput').value;
-      renderProperties();
+      renderStayCards();
     }
 
     function handleSort() {
-      currentSort = document.getElementById('sortSelect').value;
-      renderProperties();
+      sortMode = document.getElementById('sortSelect').value;
+      renderStayCards();
     }
 
-    // Default Seed Sample Votes matching WhatsApp conversation context (Rishikesh pruned)
-    function seedDefaultVotesIfEmpty() {
-      const saved = localStorage.getItem('diwali_family_votes_2026');
-      // If empty or contained Aloha, re-seed cleanly
-      if (!saved || saved.includes("Aloha") || saved.includes("Rishikesh")) {
+    // Seed authentic preliminary votes from WhatsApp thread
+    function seedInitialVotes() {
+      const existing = localStorage.getItem('diwali_family_votes_clean_2026');
+      if (!existing) {
         votes = {
           "Dad": {
-            property: "MIJMAAN – The Villa, Udaipur",
-            note: "Private estate takeover, avoids hotel elevator separation.",
-            timestamp: "11:47 AM"
+            stay: "MIJMAAN – The Villa, Udaipur",
+            note: "Private estate preserves togetherness; avoids cold hotel corridors.",
+            time: "11:47 AM"
           },
           "Mom": {
-            property: "Abu House, Mount Abu",
-            note: "100% strict Jain & Veg guarantee + Dilwara Derasar for Pappa.",
-            timestamp: "12:16 PM"
-          },
-          "Rajvi & Samveg": {
-            property: "Shikargarh Palace, Udaipur",
-            note: "Loved the 14 BHK heritage palace layout and covered spaces.",
-            timestamp: "8:40 PM"
+            stay: "Abu House, Mount Abu",
+            note: "100% strict Jain cooking + Dilwara temple for morning puja.",
+            time: "12:16 PM"
           },
           "Akshat Shah": {
-            property: "MIJMAAN – The Villa, Udaipur",
-            note: "Got complete ₹4L full-board quote; all 10 rooms available.",
-            timestamp: "12:14 PM"
+            stay: "MIJMAAN – The Villa, Udaipur",
+            note: "Full ₹4L all-meals quote obtained; all 10 bedrooms available.",
+            time: "12:14 PM"
+          },
+          "Rajvi & Samveg": {
+            stay: "Shikargarh Palace, Udaipur",
+            note: "Liked the heritage 14 BHK palace estate layout.",
+            time: "8:40 PM"
           }
         };
-        localStorage.setItem('diwali_family_votes_2026', JSON.stringify(votes));
+        localStorage.setItem('diwali_family_votes_clean_2026', JSON.stringify(votes));
       }
     }
 
-    // Initialization
+    // Initialize application
     window.addEventListener('DOMContentLoaded', () => {
-      seedDefaultVotesIfEmpty();
-      renderProperties();
-      updatePollUI();
+      seedInitialVotes();
+      renderStayCards();
+      updateConsensusUI();
     });
   </script>
 </body>
